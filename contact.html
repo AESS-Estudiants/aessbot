@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="cat">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="icon" href="images/Cub.svg" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+  <title>AESS Estudiants</title>
+  <meta name="description" content="Web associó AESS Estudiants">
+</head>
+
+<body>
+  <a href="#main-content" class="skip-to-main">Skip to Main Content</a>
+  <!-- Main Content -->
+  <header class="home-header">
+    <div>
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="#" class="active">Contacte</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="hero-section">
+      <div class="hero">
+        <div class="hero-content">
+          <h1>Contacte</h1>
+          <p>Per si encara tens dubtes...</p>
+        </div>
+      </div>
+    </section>
+  </header>
+  <main id="main-content">
+
+    <!-- Contact Section Wrapper -->
+    <section class="contact-wrapper">
+      <div class="contact-text">
+        <h2>Want to collaborate on sustainability?</h2>
+        <p>Fill out the form, and let's work together towards a sustainable future. Our team will reach out to discuss
+          how we can support your green goals.</p>
+      </div>
+      <section class="contact-info">
+        <h2>Contact Information</h2>
+        <address>
+          <p>Email: <a href="mailto:info@sustainablefuture.org">info@sustainablefuture.org</a></p>
+          <p>Phone: <a href="tel:1234567890">123-456-7890</a></p>
+          <p>Address: 123 Green Avenue, Earth</p>
+        </address>
+      </section>
+      <!-- Form section -->
+      <section class="form-container">
+        <h2 id="form-title">Contact Form</h2>
+        <form action="#" method="POST" aria-labelledby="form-title">
+
+          <!-- Fieldset for Personal Data -->
+          <fieldset>
+            <legend>Personal Data</legend>
+
+            <div class="form-row">
+              <label for="name">Name<sup>*</sup></label>
+              <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name">
+            </div>
+
+            <div class="form-row">
+              <label for="email">Email<sup>*</sup></label>
+              <input type="email" id="email" name="email" required aria-required="true"
+                placeholder="e.g., user@example.com">
+            </div>
+
+            <div class="form-row phone-group">
+              <div>
+                <label for="country-code">Country Code<sup>*</sup></label>
+                <select id="country-code" name="country-code" required aria-required="true">
+                  <option value="" disabled selected>Choose country</option>
+                  <optgroup label="Europe">
+                    <option value="+33">France (+33)</option>
+                    <option value="+49">Germany (+49)</option>
+                    <option value="+34">Spain (+34)</option>
+                    <option value="+44">UK (+44)</option>
+                  </optgroup>
+                  <optgroup label="America">
+                    <option value="+1">USA (+01)</option>
+                    <option value="+52">Mexico (+52)</option>
+                  </optgroup>
+                </select>
+              </div>
+
+              <div>
+                <label for="phone">Phone<sup>*</sup></label>
+                <input type="tel" id="phone" name="phone" required aria-required="true"
+                  placeholder="e.g., +1 555 123 4567">
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Fieldset for Other Information -->
+          <fieldset>
+            <legend>Message Information</legend>
+
+            <div class="form-row">
+              <label>User Type<sup>*</sup></label>
+              <div class="radio-options" role="radiogroup">
+                <label>
+                  <input type="radio" name="user-type" value="user" required aria-required="true">
+                  User
+                </label>
+                <label>
+                  <input type="radio" name="user-type" value="company">
+                  Company
+                </label>
+                <label>
+                  <input type="radio" name="user-type" value="ngo">
+                  NGO
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Brief subject (optional)">
+            </div>
+
+            <div class="form-row">
+              <label for="message">Message<sup>*</sup></label>
+              <textarea id="message" name="message" rows="5" required aria-required="true"
+                placeholder="Write your message here"></textarea>
+            </div>
+          </fieldset>
+
+          <!-- Consent -->
+          <div class="form-row checkbox">
+            <input type="checkbox" id="accept" name="accept" required aria-required="true">
+            <label for="accept">I accept the <a href="#" aria-label="Privacy Policy">privacy policy</a></label>
+          </div>
+
+          <!-- Submit Button -->
+          <button type="submit" class="submit-button" aria-label="Send Message">Send Message</button>
+        </form>
+      </section>
+    </section>
+
+  </main>
+
+<footer id="footer">
+<div class="container">
+  <section class="footer-main">
+    <div class="footer-sections">
+      <h2>AESS Estudiants</h2>
+
+      <!-- Menú Principal -->
+      <div class="footer-menu">
+        <h3 class="footer-heading">Menu</h3>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="faqs.html">FAQs</a></li>
+            <li><a href="contact.html">Contacte</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Enlaces Rápidos -->
+      <div class="quick-links">
+        <h3 class="footer-heading">Quick Links</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Información de Contacto -->
+      <div class="footer-contact">
+        <h3 class="footer-heading">Contacte</h3>
+        <address>
+          <ul>
+            <li><i class="fas fa-phone"></i><a href="tel:+34 934137564" aria-label="Phone"><span>(+34)
+              934137564</span> </a>
+            </li>
+            <li><i class="fas fa-envelope"></i><a href="mailto:aess.estudiants@upc.edu"
+                aria-label="Email"><span>aess.estudiants@upc.edu</span></a>
+            </li>
+            <li><i class="fas fa-map-marker-alt"></i><span>Campus Nord UPC, Barcelona</span>
+            </li>
+            <li><i class="fas fa-clock"></i>
+              <div><span>Dilluns - Divendres</span><br><span>9:00 - 17:00</span></div>
+            </li>
+          </ul>
+        </address>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Sección de Redes Sociales y Derechos -->
+  <div class="footer-bottom">
+    <ul class="social-icons">
+      <li><a href="tel:+34 934137564" class="social-icon" aria-label="Phone"><i class="fa fa-phone"></i></a></li>
+      <li><a href="#" class="social-icon" aria-label="Schedule" id="schedule-icon"><i class="fa fa-clock"></i></a></li>
+        <div id="schedule-popup" class="popup">
+          <div class="popup-content">
+            <h2>Horari</h2>
+            <p>Dilluns - Divendres (9:00 - 17:00)</p>
+            <button id="close-popup">Tancar</button>
+          </div>
+        </div>
+      <li><a href="https://www.instagram.com/aessestudiants?igsh=MXIwcGs5Z2toeXh4Mw==" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+      <li><a href="mailto:aess.estudiants@upc.edu" class="social-icon" aria-label="Mail"><i class="fa fa-envelope"></i></a></li>
+    </ul>
+
+    <p>&copy; 2025 AESS Estudiants. All images come from <!--<a href="https://www.freepik.com/" class="underline" target="_blank"> -->AESS Estudiants</a> with a <abbr title="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International">CC BY-NC-ND</abbr> license</p>
+  </div>
+</div>
+</footer>
+
+
+<!-- Scripts -->
+<script src="js/carousel.js" defer></script>
+<script src="js/calendar.js" defer></script>
+<script src="js/schedule.js" defer></script>
+
+</body>
+</html>
