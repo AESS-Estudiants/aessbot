@@ -2,22 +2,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const calendarHeader = document.querySelector('.current-month');
   const calendarGrid = document.querySelector('.calendar-grid');
-  // Funcions per canviar de mes
+  // Botons per canviar de mes
   const prevButton = document.querySelector('.prev-month');
   const nextButton = document.querySelector('.next-month');
 
+  // Actualització de dates especials:
+  // Recorda que els mesos en JavaScript són 0-indexats:
+  // Gener=0, Febrer=1, Març=2, Abril=3, Maig=4
   const specialDates = [
-    { day: 5, month: 2, year: 2025, description: "Benvinguda" },
-    { day: 12, month: 2, year: 2025, description: "Taller actuadors" },
-    { day: 19, month: 2, year: 2025, description: "Taller sensors" },
-    { day: 26, month: 2, year: 2025, description: "Taller PCBs" },
-    { day: 23, month: 3, year: 2025, description: "Seguiment" },
-    { day: 30, month: 3, year: 2025, description: "Seguiment" },
-    { day: 7, month: 4, year: 2025, description: "Seguiment" },
+    { day: 26, month: 1, year: 2025, description: "Taller Introducció" },
+    { day: 5, month: 2, year: 2025, description: "Taller Actuadors" },
+    { day: 12, month: 2, year: 2025, description: "Taller Sensors" },
+    { day: 19, month: 2, year: 2025, description: "Taller PCB" },
+    { day: 26, month: 2, year: 2025, description: "Taller Disseny 3D" },
+    { day: 23, month: 3, year: 2025, description: "Tallers de seguiment" },
+    { day: 30, month: 3, year: 2025, description: "Tallers de seguiment" },
   ];
 
   const competiDates = [
-    { day: 21, month: 4, year: 2025, description: "Competició" },
+    { day: 7, month: 4, year: 2025, description: "Competició" },
   ];
   
   let currentDate = new Date(); // Data actual
@@ -26,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function renderCalendar(date) {
     const year = date.getFullYear();
     const month = date.getMonth();
-    const firstDay = new Date(year, month, 1).getDay(); // Primer dia del mes
+    const firstDay = new Date(year, month, 1).getDay(); // Primer dia del mes (0=diumenge)
     const daysInMonth = new Date(year, month + 1, 0).getDate(); // Dies del mes actual
   
     // Actualitza el títol del mes i any
@@ -47,8 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
       <div class="day-name">Dg</div>
     `;
   
-    // Afegeix buits per als dies abans del primer dia del mes
-    for (let i = 0; i < (firstDay === 0 ? 6 : firstDay - 1); i++) {
+    // Afegeix buits per als dies abans del primer dia del mes.
+    // Si el primer dia és diumenge (0) posem 6 espais, sinó (firstDay - 1)
+    const blanks = (firstDay === 0 ? 6 : firstDay - 1);
+    for (let i = 0; i < blanks; i++) {
       calendarGrid.innerHTML += `<div></div>`;
     }
   
@@ -76,20 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const specialDate = specialDates.find(
         date => date.day === dayNumber && date.month === currentMonth && date.year === currentYear
       );
-
-      // Cerca si aquesta data és competi
+  
+      // Cerca si aquesta data és de competició
       const competiDate = competiDates.find(
         date => date.day === dayNumber && date.month === currentMonth && date.year === currentYear
       );
   
       if (specialDate) {
-        day.classList.add('special'); // Afegeix la classe CSS
-        day.title = specialDate.description; // Afegeix una descripció al títol
+        day.classList.add('special');
+        day.title = specialDate.description;
       }
-
-      if(competiDate) {
-        day.classList.add('competition'); // Afegeix la classe CSS
-        day.title = specialDate.description; // Afegeix una descripció al títol
+  
+      if (competiDate) {
+        day.classList.add('competition');
+        day.title = competiDate.description;
       }
     });
   }
@@ -106,6 +111,4 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Render inicial
   renderCalendar(currentDate);
-  
-  
 });

@@ -6,49 +6,45 @@
 }
 
 :root {
-  --green: #4E6A52;
-  --blue: #71AFFFF5;
-  --dark-green: #354F3A;
-  --dark-blue: rgb(10, 9, 67);
-  --dark-gray: #666666;
-  --darker-green: #27302E;
-  --darker-gray: #333333;
-  --darker-blue: #003476F5;
-  --darker-blue-2: #001F3F;
-  --light-green: #A8D5BA;
-  --light-blue: #B0EFFF;
-  --lighter-green: #F1F5F1;
-  --lighter-blue: #3FD9FF;
-  --light-beige: #F5EFE3;
+  /* Paleta de blancs i blaus */
+  --blue: #71AFFF;               /* Blau clar */
+  --dark-blue: #0A0943;           /* Blau fosc, gairebé negre */
+  --darker-blue: #003476;         /* Blau més fosc */
+  --darker-blue-2: #001F3F;       /* Blau molt fosc */
+  --light-blue: #B0EFFF;          /* Blau molt clar */
+  --lighter-blue: #AEDBFF;         /* Blau suau */
   --white: #FFFFFF;
-  --orange: #E07B4E;
-  --light-gray: #9C9C9C;
-  --lighter-gray: #CCCCCC;
-  --light-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  --golden: #C8A514;
+  --light-gray: #E0E0E0;
+  --lighter-gray: #F5F5F5;
+  --blue-border: #182271;
+
+  /* Substitució d’altres colors per a una paleta de blancs i blaus */
+  --orange: #007BFF;             /* Ara blau, per tot on apareixia l’"orange" */
+  --golden: #0056B3;             /* Variant més fosc */
 
   --carousel-color: #F0F0F0;
   --calendar-color: #F9F9F9;
   --calendar-color-hover: #E0E0E0;
   --calendar-color-today: #007BFF;
 
-  --whatsapp-color: #25D366;
+  --whatsapp-color: #007BFF;
 
   --blue-button: #004080;
   --blue-button-active: #0099FF;
 
-  --blue-border: rgb(24 22 113);
-
   --text-size-p: 1.2rem;
   --margin-default: 20px;
+
+  --width-aside: 13%;
+
+  --light-beige: #F0F8FF;         /* Un to molt suau, com l’AliceBlue */
 }
 
-/* Estilos Generales */
+/* Estils Generals */
 body {
   font-family: "Red Hat Text", serif;
-  /* color: var(--dark-blue); */
   background-color: var(--white);
-  font-size: var(--text-size-p);/*20px;*/
+  font-size: var(--text-size-p);
 }
 
 header {
@@ -64,7 +60,7 @@ main {
 
 p {
   line-height: 1.6;
-  font-size: var(--text-size-p);/*1rem;*/
+  font-size: var(--text-size-p);
 }
 
 h1 {
@@ -90,9 +86,8 @@ sup {
 }
 
 section {
-  scroll-margin-top: 80px; /* Ajusta según la altura del header */
+  scroll-margin-top: 80px; /* Ajusta segons l’altura del header */
 }
-
 
 .skip-to-main {
   position: absolute;
@@ -109,7 +104,7 @@ section {
   opacity: 1;
 }
 
-/* Estilos de la Navbar */
+/* Estils de la Navbar */
 .home-header .navbar {
   margin-top: -70px;
 }
@@ -117,12 +112,11 @@ section {
   position: fixed;
   width: 100%;
   padding: 24px 0;
-  background-color: var(--darker-blue-2);/*var(--dark-blue);*/
+  background-color: var(--darker-blue-2);
   background-image: url('../images/CubBlanc.svg');
-  background-size: auto;
+  background-size: 60px auto;  /* Reduïm la mida del logo */
   background-repeat: no-repeat;
-  background-position-x: 20px;
-  background-position-y: 1px;
+  background-position: 20px center; /* Logo centrat verticalment */
   z-index: 20;
   box-shadow: var(--light-shadow);
 }
@@ -135,7 +129,7 @@ section {
   gap: 12px;
 }
 
-/* Enlaces de la Navbar */
+/* Enllaços de la Navbar */
 .navbar a {
   text-decoration: none;
   color: var(--white);
@@ -146,12 +140,12 @@ section {
 }
 
 .navbar a:hover {
-  background-color: var(--golden);/*var(--blue);*/
+  background-color: var(--golden);
   color: var(--dark-blue);
   border-radius: 5px;
 }
 
-/* Efecto de subrayado animado */
+/* Efecte de subratllat animat */
 .navbar a::after {
   content: "";
   position: absolute;
@@ -169,63 +163,60 @@ section {
 }
 
 .navbar a.active {
-  background-color: var(--blue-button-active);/*var(--blue);*/
+  background-color: var(--blue-button-active);
   color: var(--dark-blue);
   border-radius: 5px;
 }
 
-/* Estilo del contenedor del carrusel */
+/* Estil del contenidor del carrusel */
 .carousel {
   position: relative;
-  width: 600px; /* Dimensiones fijas del contenedor */
-  height: 300px; /* Ajusta según lo que necesites */
-  margin: 0 auto; /* Centra el carrusel */
-  overflow: hidden; /* Oculta las partes de las imágenes que excedan el contenedor */
-  border-radius: 10px; /* Opcional: esquinas redondeadas */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra opcional */
-  background-color: var(--carousel-color); /* Fondo para las áreas vacías */
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  background-color: var(--carousel-color);
 }
 
-/* Contenedor de las imágenes */
+/* Contenidor de les imatges */
 .carousel-images {
-  display: flex; /* Pone las imágenes en fila */
-  height: 100%; /* Asegura que el contenedor de imágenes ocupa todo el alto */
-  transition: transform 0.5s ease-in-out; /* Transición suave entre imágenes */
+  display: flex;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
 }
 
-/* Estilo de las imágenes */
+/* Estil de les imatges */
 .carousel-images img {
-  width: 100%; /* Ocupa todo el ancho del carrusel */
-  height: 100%; /* Ocupa todo el alto del carrusel */
-  object-fit: cover; /* Ajusta las imágenes al contenedor sin deformarlas */
-  flex-shrink: 0; /* Previene que las imágenes se reduzcan */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-/* Botones del carrusel */
+/* Botons del carrusel */
 .carousel-button {
   position: absolute;
-  top: 50%; /* Centra los botones verticalmente */
-  transform: translateY(-50%); /* Ajusta para centrar completamente */
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
   color: var(--white);
   border: none;
   padding: 10px 15px;
   cursor: pointer;
   border-radius: 5px;
-  z-index: 10; /* Asegura que los botones estén sobre las imágenes */
+  z-index: 10;
 }
 
-/* Botón izquierdo */
 .carousel-button.prev {
   left: 10px;
 }
 
-/* Botón derecho */
 .carousel-button.next {
   right: 10px;
 }
 
-/* Hover en los botones */
 .carousel-button:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
@@ -235,8 +226,14 @@ section {
   width: 100%;
   max-width: 1800px;
   margin: 70px auto 0 auto;
-  padding: 0px;/*18px;*/
+  padding: 0px;
   text-align: center;
+}
+
+.hero-logo {
+  display: block;
+  max-width: 250px; /* Ajusta aquest valor segons la mida desitjada */
+  margin: -140px auto 10px auto; /* Centra l'imatge i afegeix marge inferior */
 }
 
 .hero {
@@ -257,7 +254,7 @@ section {
 .hero-content {
   max-width: 1800px;
   margin: 70px auto;
-  background-color: rgb(10, 9, 67, 0);/*rgba(58, 95, 59, 0.7);*/
+  background-color: rgba(10, 9, 67, 0);
   padding: 18px;
   border-radius: 8px;
 }
@@ -275,7 +272,6 @@ section {
   color: var(--dark-blue);
 }
 
-/* Media Queries */
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 3rem;
@@ -309,7 +305,7 @@ section {
 .calendar-header h2 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: var(--darker-gray);
+  color: var(--darker-blue);
 }
 
 .calendar-header button {
@@ -332,19 +328,79 @@ section {
   text-align: center;
 }
 
-/* Dies de la setmana */
+/* Contenidor per al calendari i llegenda */
+.calendar-and-legend {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+/* Llegenda del calendari */
+.calendar-legend {
+  max-width: 200px; /* Ajusta segons el teu disseny */
+  font-family: "Red Hat Text", serif;
+  text-align: left;
+}
+
+.calendar-legend h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: var(--dark-blue);
+}
+
+.calendar-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.calendar-legend li {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.legend-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  margin-right: 8px;
+  border-radius: 4px; /* Ajusta el valor per al grau de redondeig desitjat */
+}
+
+
+/* Colors per als ítems de la llegenda */
+.legend-icon.guided {
+  background-color: var(--darker-blue-2); /* Blau fosc per als tallers guiats */
+}
+
+.legend-icon.followup {
+  background-color: var(--light-blue); /* Blau fluix per als tallers de seguiment */
+}
+
+.legend-icon.final {
+  background-color: #FFBF00; /* Color ambar */
+}
+
+.legend-icon.inscriptions {
+  background-color: #800000; /* Color granate */
+}
+
 .day-name {
   font-size: 0.9rem;
   font-weight: bold;
   color: var(--dark-gray);
 }
 
-/* Dies del mes */
 .day {
   padding: 8px;
   border-radius: 4px;
   font-size: 0.9rem;
-  color: var(--darker-gray);
+  color: var(--darker-blue);
   background-color: var(--calendar-color);
   cursor: pointer;
 }
@@ -353,7 +409,6 @@ section {
   background-color: var(--calendar-color-hover);
 }
 
-/* Dies destacats (opcional) */
 .day.today {
   background-color: var(--calendar-color-today);
   color: var(--white);
@@ -374,18 +429,17 @@ section {
   border-radius: 10px;
 }
 
-  /* Introducción */
+/* Introducció */
 .introduction {
   background: linear-gradient(var(--light-beige), var(--white));
   display: flex;
   justify-content: center;
 }
 
-.introduction>div {
+.introduction > div {
   max-width: 800px;
   padding: 18px;
   text-align: left;
-  /* color: var(--dark-green); */
   color: var(--dark-blue);
 }
 
@@ -395,9 +449,9 @@ section {
   line-height: 1.6;
 }
 
-/********COLABORACIONS********/
+/******** COL·LABORACIONS ********/
 .highlights {
-  background-color: white;
+  background-color: var(--white);
   padding: 40px 18px;
   text-align: left;
 }
@@ -417,41 +471,37 @@ section {
   color: var(--white);
   padding: 18px;
   border-radius: 8px;
-  /* box-shadow: var(--light-shadow); */
   text-align: left;
 }
 
-/* Imatges dins les targetes */
 .highlight-card img {
-  max-height: 150px; /* Ajusta l'alçada màxima per uniformitat */
+  max-height: 150px;
   width: 100%;
-  object-fit: contain; /* Garanteix que no es deformin */
-  display: block; /* Evita espais no desitjats */
+  object-fit: contain;
+  display: block;
 }
 
-/* Responsivitat per a pantalles petites */
 @media (max-width: 768px) {
   .highlight-cards {
-    flex-direction: column; /* Posa les imatges en columna en pantalles petites */
+    flex-direction: column;
     gap: 18px;
   }
 
   .highlight-card img {
-    max-width: 70%; /* Ajusta la mida de les imatges en pantalles petites */
+    max-width: 70%;
   }
 }
 
 /* CTA Section */
 .cta-section {
-  background: linear-gradient(160deg, var(--light-beige), var(--light-green));
-  color: var(--dark-blue);/*green);*/
+  background: linear-gradient(160deg, var(--light-beige), var(--white));
+  color: var(--dark-blue);
   padding: 200px 18px;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
 
-/* Separador Ondulado */
 .cta-section::before {
   content: "";
   position: absolute;
@@ -463,24 +513,20 @@ section {
   clip-path: ellipse(60% 100% at 50% 0%);
 }
 
-/* Contenido del CTA */
-
 .cta-content p {
   font-size: 1.2rem;
   color: var(--beige);
   margin-bottom: 32px;
 }
 
-
-
 .cta-content img {
   width: 300px;
   margin-bottom: 18px;
 }
 
-/* Footer base */
+/* Footer */
 #footer {
-  background-color: var(--darker-gray);/*green);*/
+  background-color: var(--darker-blue-2);
   color: var(--white);
   padding: 48px 18px;
   line-height: 1.4;
@@ -491,7 +537,6 @@ section {
   text-decoration: underline;
 }
 
-/* Diseño en una columna para móviles */
 .footer-sections {
   display: grid;
   grid-template-columns: 1fr;
@@ -500,7 +545,7 @@ section {
 }
 
 .secret-text {
-  color: var(--darker-gray);/*green);*/
+  color: var(--darker-blue-2);
 }
 
 .footer-main {
@@ -508,11 +553,10 @@ section {
   margin: 0 auto;
 }
 
-/* Estilos generales */
 .footer-heading {
   font-size: 1.2rem;
   margin-bottom: 16px;
-  color: var(--light-gray);/*var(--light-blue);*/
+  color: var(--light-gray);
   font-family: "Red Hat Text", serif;
 }
 
@@ -536,10 +580,6 @@ footer a:hover {
   color: var(--light-beige);
 }
 
-/* .footer-contact h3 {
-  text-align: left;
-} */
-
 .footer-contact ul {
   font-size: 0.9rem;
   color: var(--light-gray);
@@ -557,7 +597,7 @@ footer a:hover {
   top: 4px;
 }
 
-/* Redes Sociales */
+/* Xarxes Socials */
 .social-icons {
   display: flex;
   gap: 16px;
@@ -576,7 +616,6 @@ footer a:hover {
   transform: scale(1.1);
 }
 
-/* Derechos */
 .footer-bottom {
   color: var(--light-gray);
   margin-top: 18px;
@@ -600,11 +639,10 @@ footer a:hover {
   color: var(--white);
 }
 
-/* Diseño para pantallas medianas */
+/* Diseny per a pantalles petites */
 @media (min-width: 600px) {
   .footer-sections h2 {
     grid-column: span 3;
-
   }
   .footer-sections {
     grid-template-columns: repeat(3, 1fr);
@@ -612,11 +650,9 @@ footer a:hover {
   }
 }
 
-/* Diseño para pantallas grandes */
 @media (min-width: 1024px) {
   .footer-sections h2 {
     grid-column: span 1;
-
   }
   .footer-sections {
     grid-template-columns: repeat(4, 1fr);
@@ -630,7 +666,7 @@ footer a:hover {
   }
 }
 
-/* Botón de WhatsApp Flotante */
+/* Botó de WhatsApp Flotant */
 .whatsapp-icon {
   position: fixed;
   bottom: 18px;
@@ -659,10 +695,10 @@ footer a:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--light-blue);/*green);*/
+  background-color: var(--light-blue);
   padding: 118px 18px 48px;
   text-align: center;
-  color: var(--dark-blue);/*green);*/
+  color: var(--dark-blue);
 }
 
 .page-header h1 {
@@ -676,14 +712,12 @@ footer a:hover {
 
 /* Sustainable Goals Section Styling */
 .sustainable-goals {
-  /* padding: 40px 18px; */
   margin-top: 10px;
   text-align: left;
 }
 
 .sustainable-goals p {
   font-size: 1.1rem;
-  /* color: var(--dark-green); */
   color: var(--dark-blue);
   margin-bottom: 32px;
 }
@@ -707,12 +741,10 @@ figcaption {
   color: var(--light-gray);
 }
 
-
-/* Estilos para los ítems de los objetivos */
+/* Estils per als ítems dels objectius */
 .goals-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  /* Dos columnas en pantallas grandes */
   gap: 18px;
 }
 
@@ -725,21 +757,17 @@ figcaption {
 }
 
 .goal-item h3 {
-  /* color: var(--dark-green); */
   color: var(--dark-blue);
   margin-bottom: 8px;
 }
 
-/* La última fila ocupa toda la columna */
 .goals-list .goal-item:last-child {
   grid-column: span 2;
 }
 
-/* Ajustes para dispositivos móviles */
 @media (max-width: 768px) {
   .goals-list {
     grid-template-columns: 1fr;
-    /* Cambia a una sola columna */
   }
 
   .goals-list .goal-item:last-child {
@@ -752,16 +780,10 @@ figcaption {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
-  /* gap: 2rem; */
   padding: 3rem 1rem;
-  /*background: url(../images/landscape.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed;*/
 }
 
-/* Rest of the Styles for the Page */
+/* Restants estils de la pàgina */
 .overview,
 .key-statistics,
 .featured-projects,
@@ -775,12 +797,9 @@ figcaption {
 }
 
 .key-statistics p {
-  /* font-size: 18px; */
-  /* width: 100%; */
-  /* max-width: 1000px; */
-  /* margin: 0 auto; */
   margin-bottom: var(--margin-default);
 }
+
 .key-statistics table {
   width: 90%;
   max-width: 1000px;
@@ -805,16 +824,14 @@ figcaption {
 }
 
 .key-statistics th {
-  /* background-color: var(--green); */
-  background-color: var(--blue);
+  background-color: var(--darker-blue);
   color: var(--white);
   font-size: 1.2rem;
 }
 
 .key-statistics .table-header {
-  /* background-color: var(--dark-green); */
-  background-color: var(--dark-blue);
-  color: var(--light-beige);
+  background-color: var(--darker-blue);
+  color: var(--white);
   font-weight: bold;
   font-size: 1.2rem;
   text-align: center;
@@ -822,14 +839,13 @@ figcaption {
 }
 
 .key-statistics tbody tr:nth-child(even) {
-  /* background-color:var(--lighter-green); */
-  background-color: var(--blue);/*var(--lighter-blue);*/
+  background-color: var(--light-gray);
 }
 
 .key-statistics tfoot tr td {
-  background-color: var(--dark-blue);/*var(--light-blue);/*green);*/
+  background-color: var(--darker-blue);
   font-weight: bold;
-  color: white;/*var(--dark-blue);/*green);*/
+  color: white;
   text-align: center;
   font-size: 1.1rem;
   padding: 20px;
@@ -847,7 +863,7 @@ figcaption {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: var(--blue);/*green);*/
+  background-color: var(--blue);
   color: var(--white);
   padding: 18px;
   border-radius: 8px;
@@ -867,18 +883,18 @@ figcaption {
 }
 
 .download-button button {
-  display: block; /* Converteix el botó en un element de bloc */
-  margin: 0 auto; /* Centra horitzontalment utilitzant marges automàtics */
-  all: unset; /* Elimina tots els estils per defecte */
+  display: block;
+  margin: 0 auto;
+  all: unset;
   display: inline-block;
   padding: 10px 20px;
-  width: 230px; /* Amplada fixa */
-  height: 30px; /* Alçada fixa */
+  width: 230px;
+  height: 30px;
   background-color: var(--darker-blue-2);
   color: var(--white);
   border: 2px solid var(--darker-blue-2);
   border-radius: 5px;
-  font-size: 1.5rem;/*20px;*/
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   text-align: center;
@@ -887,29 +903,30 @@ figcaption {
 }
 
 .download-button button:hover {
-  background-color: var(--white); /* Blanc quan el ratolí està sobre */
-  color: var(--blue-button); /* Blau fosc per al text */
-  border: 2px solid var(--blue-button); /* Bord blau fosc */
+  background-color: var(--white);
+  color: var(--blue-button);
+  border: 2px solid var(--blue-button);
 }
 
 .download-button button:active {
-  background-color: var(--blue-button-active); /* Blau cel quan es clica */
-  color: var(--white); /* Blau fosc per al text */
-  border: 2px solid var(--blue-button); /* Mateix bord blau fosc */
+  background-color: var(--blue-button-active);
+  color: var(--white);
+  border: 2px solid var(--blue-button);
 }
 
 .container-sidebar {
-  margin-left: 240px;
-  min-height: 100vh; /* Evita que quedi tallat */
-  padding-right: 240px; /* Ajusta segons la mida del sidebar */
+  margin-left: calc(var(--width-aside) + 8%); /* Augmenta el marge esquerre per deixar espai pel menú */
+  min-height: 100vh;
+  padding-right: 240px;
 }
 
-/* Sidebar Card Style */
+/* Estil de la Sidebar */
 .sidebar-card {
   position: fixed;
-  top: 50%;/*500px;*/
-  /* left: 18px; */
-  width: 200px;
+  top: 50%;
+  left: 20px; 
+  width: var(--width-aside);
+  min-width: 250px; /* Amplada mínima per evitar que el contenidor es faci massa estret */
   padding: 18px;
   background-color: var(--white);
   border-radius: 8px;
@@ -917,7 +934,20 @@ figcaption {
   text-align: center;
   z-index: 9;
   border: 5px solid var(--blue-border);
+  transform: translateY(-50%);
+  overflow-wrap: break-word; /* Assegura que el text es trenqui dins el contenidor */
+  word-wrap: break-word; /* Compatibilitat amb navegadors antics */
 }
+
+/* Ajust per a pantalles petites */
+@media screen and (max-width: 480px) {
+  .sidebar-card {
+    width: 80vw; /* Amplada relativa a la finestra */
+    left: 10vw;  /* Centra el menú lateralment dins de la finestra */
+    padding: 12px; /* Ajusta el padding si cal */
+  }
+}
+
 
 @media (min-width: 1440px) {
   .sidebar-card {
@@ -936,7 +966,7 @@ figcaption {
 }
 
 .sidebar-card ul li a {
-  color: var(--darker-blue-2); /*var(--dark-blue);/*green);*/
+  color: var(--darker-blue-2);
   text-decoration: none;
   transition: color 0.3s, transform 0.3s, background-color 0.3s;
   display: block;
@@ -946,7 +976,7 @@ figcaption {
 
 .sidebar-card ul li a:hover {
   color: var(--white);
-  background-color: var(--darker-blue-2);/*var(--blue-border);*/
+  background-color: var(--darker-blue-2);
   box-shadow: var(--light-shadow);
 }
 
@@ -969,66 +999,34 @@ figcaption {
 }
 
 /* New Sections Styling */
-/* .sustainable-goals, */
 .partners {
   padding: 40px 18px;
   text-align: left;
 }
 
 .contact-wrapper {
-  /* display: grid; */
-  /* grid-template-areas: 
-    "ctext"
-    "form"
-    "info"; */
   display: flex;
   justify-content: center;
-  justify-items: center;
   align-items: center;
   gap: 24px;
   padding: 48px 8px;
 }
 
-
-
-
-/* @media (min-width: 768px) {
-  .contact-wrapper {
-  grid-template-areas: 
-    "ctext form"
-    "info form";
-}
-} */
-
-.contact-text{
+.contact-text {
   width: 90%;
   grid-area: ctext;
   align-self: end;
 }
-.contact-info{
+
+.contact-info {
   grid-area: info;
   align-self: start;
 }
 
-/* .form-container{
-  width: 80%;
-  padding: 16px;
-  margin: 0 auto;
-} */
-
-.contact-text h2{
-  margin-bottom: .5rem;
+.contact-text h2 {
+  margin-bottom: 0.5rem;
 }
 
-/* @media (min-width: 768px) {
-  .contact-wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-} */
-
-
-/* Contact Form Section */
 .contact-form-section {
   background: var(--light-beige);
   padding: 40px 18px;
@@ -1037,8 +1035,6 @@ figcaption {
 }
 
 .form-container {
-  /* width: 100%;
-  padding: 16px; */
   width: 80%;
   padding: 16px;
   margin: 0 auto;
@@ -1047,7 +1043,7 @@ figcaption {
 .form-container label {
   display: block;
   margin-bottom: 5px;
-  color: var(--dark-blue);/*green);*/
+  color: var(--dark-blue);
   font-weight: bold;
   width: 100%;
 }
@@ -1064,15 +1060,15 @@ figcaption {
 input::placeholder,
 textarea::placeholder {
   color: var(--light-gray);
-  font-style: italic; 
+  font-style: italic;
   font-family: "Red Hat Text", serif;
 }
 
 form input:focus,
 form textarea:focus {
   outline: none;
-  border-color: var(--blue);/*green); */
-  box-shadow: 0 0 5px var(--blue);/*green); */
+  border-color: var(--blue);
+  box-shadow: 0 0 5px var(--blue);
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1082,7 +1078,7 @@ form textarea:focus {
 
 .checkbox a,
 .contact-info a {
-  color: var(--orange)
+  color: var(--orange);
 }
 
 input[type="checkbox"] {
@@ -1090,7 +1086,7 @@ input[type="checkbox"] {
   top: 3px;
   width: auto;
   margin-right: 8px;
-  accent-color: var(--blue);/*green); */
+  accent-color: var(--blue);
   transition: accent-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1098,7 +1094,7 @@ input[type="checkbox"] {
   display: block;
   width: 100%;
   padding: 16px;
-  background-color: var(--blue);/*green);*/
+  background-color: var(--blue);
   color: var(--white);
   font-size: 1.1rem;
   font-weight: bold;
@@ -1109,7 +1105,7 @@ input[type="checkbox"] {
 }
 
 .submit-button:hover {
-  background-color: var(--dark-blue);/*green);*/
+  background-color: var(--dark-blue);
 }
 
 /* Fieldset Styles */
@@ -1122,12 +1118,11 @@ fieldset {
 
 legend {
   font-size: 1.2rem;
-  color: var(--dark-blue);/*green);*/
+  color: var(--dark-blue);
   font-weight: bold;
   margin-bottom: 8px;
   padding: 0 8px;
 }
-
 
 /* User Type Field with Radio Buttons */
 .user-type {
@@ -1137,13 +1132,13 @@ legend {
 .user-type label {
   display: block;
   font-weight: bold;
-  color: var(--dark-blue);/*green);*/
+  color: var(--dark-blue);
   margin-bottom: 8px;
 }
 
 .radio-options {
   display: flex;
-  gap: 15px; /* Separación entre las opciones */
+  gap: 15px;
   margin-bottom: 16px;
 }
 
@@ -1151,13 +1146,13 @@ legend {
   display: flex;
   align-items: center;
   font-weight: normal;
-  color: var(--dark-blue);/*green);*/
+  color: var(--dark-blue);
 }
 
 .radio-options input[type="radio"] {
-  margin-right: 8px; 
+  margin-right: 8px;
   margin-bottom: 0;
-  accent-color: var(--blue);/*green); */
+  accent-color: var(--blue);
   cursor: pointer;
   transition: accent-color 0.3s ease;
 }
@@ -1167,67 +1162,6 @@ legend {
   border-radius: 50%;
   box-shadow: none;
 }
-
-/* Contact Information Section */
-.contact-info {
-  text-align: center;
-  width: 90%;
-  padding: 32px;
-  color: var(--dark-blue);/*green);*/
-  background-color: var(--light-beige);
-}
-
-.contact-info p {
-  font-size: 1.1rem;
-  margin-bottom: 5px;
-}
-
-address {
-  font-style: normal;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-fieldset {
-  border: 2px solid var(--blue-border);
-  border-radius: 12px;
-  padding: 15px;
-  margin-bottom: 15px;
-}
-
-legend {
-  font-weight: bold;
-  color: var(--lighter-blue);
-}
-
-label {
-  display: block;
-  font-size: 1rem;
-  margin-bottom: 5px;
-  color: var(--lighter-gray);
-  width: 30%;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid var(--blue-border);
-  border-radius: 10px;
-  font-size: 1rem;
-  color: var(--darker-gray);
-  background-color: var(--white);
-  transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-  border-color: var(--lighter-blue);
-  outline: none;
-}
-
 
 .radio-options {
   display: flex;
@@ -1251,7 +1185,6 @@ input:focus, textarea:focus {
   }
 }
 
-
 .radio-options input {
   margin-right: 10px;
   width: auto;
@@ -1271,71 +1204,133 @@ input:focus, textarea:focus {
   color: var(--lighter-blue);
 }
 
+/* New Sections Styling: FAQs agrupades */
 
-/************ FAQs *****************/
+/* Contenidor principal de FAQs */
 .faqs-style {
-  max-width: 70%;
+  width: 70%;
+  max-width: 800px;
   margin: 0 auto;
-  /* margin-bottom: 10px; */
   font-family: "Red Hat Text", serif;
 }
 
-/* Estil del resum (pregunta) amb cantonades arrodonides quan NO està obert */
+/* Grups de FAQ */
+.faq-group {
+  margin: 30px auto;
+  width: 70%;
+  max-width: 800px;
+  padding: 20px;
+  border: 1px solid var(--blue-border);
+  border-radius: 8px;
+  background-color: var(--light-bg);
+}
+
+.faq-group h2 {
+  margin-bottom: 15px;
+  font-size: 1.75em;
+  color: var(--primary-color);
+  border-bottom: 1px solid var(--blue-border);
+  padding-bottom: 5px;
+  text-align: center; 
+}
+
+/* Ítems de FAQ dins de cada grup */
+.faq-items details {
+  margin-bottom: 15px;
+  background-color: var(--secondary-bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.faq-items details summary {
+  cursor: pointer;
+  padding: 10px;
+  font-weight: bold;
+  list-style: none;
+}
+
+.faq-items details summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-items details[open] summary {
+  background-color: var(--primary-bg);
+  color: var(--blue-border);
+}
+
+.faq-items .answer {
+  padding: 10px 15px;
+  background-color: var(--white);
+  border: 3px solid var(--blue-border);
+  margin: 0;
+}
+
+/* Estils de FAQ originals per si cal conservar algunes regles */
 summary {
+  /* Aquestes regles poden quedar si es volen mantenir per defecte en elements que no formïn part dels grups */
   padding: 10px;
   font-size: 18px;
   cursor: pointer;
-  list-style-type: none; /* Elimina la fletxa per defecte */
+  list-style-type: none;
   font-weight: bold;
   background-color: var(--darker-blue-2);
   color: white;
   border: 2px solid var(--darker-blue-2);
   margin-top: 10px;
-  border-radius: 10px; /* Quan no està obert, totes les cantonades són arrodonides */
+  border-radius: 10px;
   transition: border-radius 0.2s ease-in-out;
 }
 
-/* Quan s'obre el desplegable, només es mantenen les cantonades arrodonides a dalt */
 details[open] summary {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
-/* Canvi de fons en passar el cursor */
 summary:hover {
   background-color: var(--white);
   color: var(--blue-button);
   border: 2px solid var(--blue-button);
 }
 
-/* Afegim una fletxa personalitzada */
-summary::after {
-  content: " ▼";
+summary::before {
+  content: "+ ";
   font-size: 18px;
   color: white;
   padding-left: 10px;
 }
 
-/* Fletxa quan el desplegable està obert */
-details[open] summary::after {
-  content: " ▲";
+details[open] summary::before {
+  content: "- ";
+  color: var(--blue-button);
 }
 
-/* Estil per al text de la resposta */
 .answer {
   padding: 10px;
   background-color: #fafafa;
   border-top: 1px solid #ddd;
   margin-bottom: 10px;
-  border-radius: 0 0 10px 10px; /* Arrodonim només les cantonades inferiors */
+  border-radius: 0 0 10px 10px;
 }
 
-/* Quan el `details` NO està obert, amaguem les cantonades arrodonides de la resposta */
 details:not([open]) .answer {
   border-radius: 10px;
 }
 
-
+/* Opcional: Millora visual per a dispositius mòbils en els grups de FAQ */
+@media screen and (max-width: 768px) {
+  .faq-group {
+    padding: 15px;
+  }
+  .faq-group h2 {
+    font-size: 1.5em;
+  }
+  .faq-items details summary {
+    padding: 8px;
+  }
+  .faq-items .answer {
+    padding: 8px 12px;
+  }
+}
 
 /*********** HORARI ICONA RELLOTGE *****************/
 .popup {
@@ -1388,4 +1383,3 @@ details:not([open]) .answer {
   border: 2px solid var(--blue-button);
   color: var(--blue-button);
 }
-

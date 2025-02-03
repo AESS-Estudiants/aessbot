@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="cat">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +11,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
-  <title>AESS Estudiants</title>
-  <meta name="description" content="Web associó AESS Estudiants">
+  
+  <title>AESSBot 2025</title>
+  <meta name="description" content="Web de la competició AESSBot 2025 - Organitzada per AESS Estudiants. Inscripcions obertes per estudiants de la UPC.">
 </head>
 
 <body>
@@ -32,8 +32,10 @@
     <section class="hero-section">
       <div class="hero">
         <div class="hero-content">
+          <!-- Logo de l'associació afegit per sobre del títol -->
+          <img src="images/LogoAESS.svg" alt="Logo AESS Estudiants" class="hero-logo">
           <h1>AESSBot 2025</h1>
-          <p>Ens veiem el 21 de maig!</p>
+          <p>Ens veiem el 07 de maig!</p>
         </div>
       </div>
     </section>
@@ -48,8 +50,8 @@
           <li><a href="#activities">Activitats</a></li>
           <li><a href="#calendar">Calendari</a></li>
           <li><a href="#normative">Normativa</a></li>
-          <li><a href="#normative">Inscripcions</a></li>
-          <li><a href="#normative">Colaboracions</a></li>
+          <li><a href="#register">Inscripcions</a></li>
+          <li><a href="#partners">Col·laboracions</a></li>
         </ul>
       </nav>
     </aside>
@@ -60,22 +62,19 @@
       <section id="overview">
         <div class="overview">
           <h2>La competició</h2>
-          <p>Entra al ring i demostra qui és el rei del Minisumo!
-            El teu repte? Dissenyar el robot definitiu que aconsegueixi fer fora a la resta d'oponents i proclamar-te
-            vencedor.
-            Preparat per portar les teves habilitats a un altre nivell? La competició t’espera, i només els millors
-            dominaran el ring!</p>
+          <p>Entra al ring i demostra qui és el rei del Minisumo! El teu repte? Dissenyar el robot definitiu que aconsegueixi fer fora a la resta d'oponents i proclamar-te vencedor.
+            Preparat per portar les teves habilitats a un altre nivell? La competició t’espera, i només els millors dominaran el ring!</p>
         </div>
 
-          <div class="carousel">
-            <div class="carousel-images"></div>
-            <button class="carousel-button prev">&lt;</button>
-            <button class="carousel-button next">&gt;</button>
-          </div>
+        <div class="carousel">
+          <div class="carousel-images"></div>
+          <button class="carousel-button prev">&lt;</button>
+          <button class="carousel-button next">&gt;</button>
+        </div>
       </section>
 
-      <!-- Key Statistics Section -->
-        <section id="activities" class="key-statistics">
+      <!-- Activitats Section -->
+      <section id="activities" class="key-statistics">
         <div>
           <h2>Activitats</h2>
           <p>Descobreix els tallers i esdeveniments preparats per ajudar-te a dissenyar i perfeccionar el teu robot.</p>
@@ -93,133 +92,152 @@
             </thead>
             <tbody>
               <tr>
-                <td>Benvinguda</td>
+                <td>Taller Introducció</td>
+                <td>26/02/2025 (11:00 - 13:00)</td>
+                <td>Benvinguda, presentació de la competició i primera comanda de material per equip. Pressupost de 70€ subvencionat (ampliable a 100€ si escau).</td>
+                <td>Campus Nord UPC A4001</td>
+              </tr>
+              <tr>
+                <td>Taller Actuadors</td>
                 <td>05/03/2025 (11:00 - 13:00)</td>
-                <td>Presentació de la competició i primers passos.</td>
+                <td>Introducció a Arduino i control dels actuadors del robot.</td>
                 <td>Campus Nord UPC A4001</td>
               </tr>
               <tr>
-                <td>Actuadors</td>
+                <td>Taller Sensors</td>
                 <td>12/03/2025 (11:00 - 13:00)</td>
-                <td>Introducció a Arduino i com controlar els actuadors del robot.</td>
+                <td>Introducció als sensors i primers algorismes del robot.</td>
                 <td>Campus Nord UPC A4001</td>
               </tr>
               <tr>
-                <td>Sensors</td>
+                <td>Taller PCB</td>
                 <td>19/03/2025 (11:00 - 13:00)</td>
-                <td>Introducció al sensors i primers algorismes del robot.</td>
-                <td>Campus Nord UPC A4001</td>
-              </tr>
-              <tr>
-                <td>PCB</td>
-                <td>26/03/2025 (11:00 - 13:00)</td>
                 <td>Disseny de la placa i soldadura dels components.</td>
                 <td>Campus Nord UPC A4001</td>
               </tr>
               <tr>
-                <td rowspan="3">Seguiment</td>
+                <td>Taller Disseny 3D</td>
+                <td>26/03/2025 (11:00 - 13:00)</td>
+                <td>Disseny 3D del xassis del robot amb Fusion 360.</td>
+                <td>Campus Nord UPC A4001</td>
+              </tr>
+              <tr>
+                <td rowspan="2">Seguiment</td>
                 <td>23/04/2025 (11:00 - 13:00)</td>
-                <td rowspan="3">Seguiment del robot</td>
-                <td rowspan="3">Campus Nord UPC A4001</td>
+                <td rowspan="2">Suport per enllestir els robots.</td>
+                <td rowspan="2">Campus Nord UPC A4001</td>
               </tr>
               <tr>
                 <td>30/04/2025 (11:00 - 13:00)</td>
               </tr>
               <tr>
-                <td>07/05/2025 (11:00 - 13:00)</td>
-              </tr>
-              <tr>
                 <td>Competició</td>
-                <td>21/05/2025 (11:00 - 13:00)</td>
-                <td>Dia de la competició</td>
+                <td>07/05/2025 (11:00 - 13:00)</td>
+                <td>Dia de la competició.</td>
                 <td>Campus Nord UPC A4001</td>
               </tr>
             </tbody>
             <tfoot>
               <tr>
-                <td colspan="4">Si tens qualsevol dubte contacta'ns!</td>
+                <td colspan="4">Si tens qualsevol dubte, contacta'ns!</td>
               </tr>
             </tfoot>
           </table>
         </div>
       </section>
 
-      <section id="calendar"></section>
+      <!-- Calendari Section amb Llegenda -->
+      <section id="calendar">
         <div class="featured-projects">
           <h2>Calendari</h2>
           <p>Aquí trobareu les dates claus de la competició.</p>
         </div>
-        <div class="calendar">
-          <div class="calendar-header">
-            <button class="prev-month">&lt;</button>
-            <h2 class="current-month">Gener 2025</h2>
-            <button class="next-month">&gt;</button>
+        <div class="calendar-and-legend">
+          <div class="calendar">
+            <div class="calendar-header">
+              <button class="prev-month">&lt;</button>
+              <h2 class="current-month">Febrer 2025</h2>
+              <button class="next-month">&gt;</button>
+            </div>
+            <div class="calendar-grid">
+              <div class="day-name">Dl</div>
+              <div class="day-name">Dt</div>
+              <div class="day-name">Dc</div>
+              <div class="day-name">Dj</div>
+              <div class="day-name">Dv</div>
+              <div class="day-name">Ds</div>
+              <div class="day-name">Dg</div>
+              <!-- Dies del mes -->
+              <div class="day">1</div>
+              <div class="day">2</div>
+              <div class="day">3</div>
+              <!-- ... més dies ... -->
+            </div>
           </div>
-          <div class="calendar-grid">
-            <div class="day-name">Dl</div>
-            <div class="day-name">Dt</div>
-            <div class="day-name">Dc</div>
-            <div class="day-name">Dj</div>
-            <div class="day-name">Dv</div>
-            <div class="day-name">Ds</div>
-            <div class="day-name">Dg</div>
-            <!-- Dies del mes -->
-            <div class="day">1</div>
-            <div class="day">2</div>
-            <div class="day">3</div>
+          <div class="calendar-legend">
+            <h3>Llegenda</h3>
+            <ul>
+              <li><span class="legend-icon guided"></span> Tallers guiats</li>
+              <li><span class="legend-icon followup"></span> Tallers de seguiment</li>
+              <li><span class="legend-icon final"></span> Final</li>
+              <li><span class="legend-icon inscriptions"></span> Final Inscripcions</li>
+            </ul>
           </div>
         </div>
       </section>
 
+      <!-- Normativa Section -->
       <section id="normative">
-        <div class="sustainable-goals">
-        <h2>Normativa</h2>
-        <p>Consulta les regles bàsiques i especificacions per competir a l’AESSBot. Respectar la normativa és clau per
-          gaudir de la competició!</p>
-      </div>
-      <div class="download-button">
-        <button id="download-btn">Descarregar PDF</button>
-
-        <script>
-          document.getElementById('download-btn').addEventListener('click', () => {
-            window.location.href = 'documentos/normativa.pdf';
-          });
-        </script>
-
-        </div>
-      </section>
-
-      <section id="register">
-        <div class="sustainable-goals">
-          <h2>Inscripcions</h2>
-          <p>No perdis l'oportunitat de participar! Inscriu-te ara i prepara't per al repte!</p>
+        <div class="key-statistics">
+          <h2>Normativa</h2>
+          <p>Consulta les regles bàsiques i especificacions per competir a l’AESSBot. Respectar la normativa és clau per gaudir de la competició!</p>
         </div>
         <div class="download-button">
-          <button onclick="window.location.href='https://docs.google.com/forms/d/1aH1eJ7hUc8l2asgY57dPnf7-An68OS7DTxZJ1Z8TFd0/edit';"> Registra't </button>
+          <button id="download-btn">Descarregar PDF</button>
+          <script>
+            document.getElementById('download-btn').addEventListener('click', () => {
+              window.open('documentos/normativa_v1.pdf', '_blank');
+            });
+
+          </script>
         </div>
       </section>
 
-      <!-- New Partners & Collaborations Section -->
-      <section id="partners" class="sustainable-goals">
+      <!-- Inscripcions Section -->
+      <section id="register">
+        <div class="key-statistics">
+          <h2>Inscripcions</h2>
+          <p>
+            Inscriu-te entre el dilluns 10 de febrer i el divendres 25 de febrer. 
+            La inscripció és gratuïta i es pot realitzar de forma individual o en equips (fins a 4 persones). 
+          </p>
+        </div>
+        <div class="download-button">
+          <button onclick="window.open('https://forms.gle/HS1dLkhx7CWvooET6', '_blank');">Registra't</button>
+        </div>
+      </section>
+
+      <!-- Col·laboracions Section -->
+      <section id="partners" class="key-statistics">
         <h2>Amb la col·laboració de:</h2>
         <div class="highlight-cards">
           <div class="highlight-card">
-            <img src="images/logo-upc.svg" alt="Logo UPC">
+            <img src="images/LogoAESS.svg" alt="Logo AESS Estudiants">
           </div>
-
           <div class="highlight-card">
             <img src="images/logo-telecos.svg" alt="Logo ETSETB">
           </div>
-
           <div class="highlight-card">
-            <img src="images/LogoAESS.svg" alt="Logo AESS Estudiants">
+            <img src="images/logo-upc.svg" alt="Logo UPC">
           </div>
         </div>
       </section>
-    </main>
 
-    <footer id="footer">
-      <div>
+    </div>
+  </main>
+
+  <footer id="footer">
+    <div>
       <div class="container">
         <section class="footer-main">
           <div class="footer-sections">
@@ -237,7 +255,7 @@
               </nav>
             </div>
       
-            <!-- Enlaces Rápidos -->
+            <!-- Enllaços Ràpids -->
             <div class="quick-links">
               <h3 class="footer-heading">Quick Links</h3>
               <nav>
@@ -248,21 +266,19 @@
               </nav>
             </div>
     
-            <!-- Información de Contacto -->
+            <!-- Informació de Contacte -->
             <div class="footer-contact">
               <h3 class="footer-heading">Contacte</h3>
               <address>
                 <ul>
-                  <li><i class="fas fa-phone"></i><a href="tel:+34 934137564" aria-label="Phone"><span>(+34)
-                    934137564</span> </a>
-                  </li>
-                  <li><i class="fas fa-envelope"></i><a href="mailto:aess.estudiants@upc.edu"
-                      aria-label="Email"><span>aess.estudiants@upc.edu</span></a>
-                  </li>
-                  <li><i class="fas fa-map-marker-alt"></i><span>Campus Nord UPC, Barcelona</span>
-                  </li>
+                  <li><i class="fas fa-phone"></i><a href="tel:+34 934137564" aria-label="Phone"><span>(+34) 934137564</span></a></li>
+                  <li><i class="fas fa-envelope"></i><a href="mailto:aess.estudiants@upc.edu" aria-label="Email"><span>aess.estudiants@upc.edu</span></a></li>
+                  <li><i class="fas fa-map-marker-alt"></i><span>Campus Nord UPC, Barcelona</span></li>
                   <li><i class="fas fa-clock"></i>
-                    <div><span>Dilluns - Divendres</span><br><span>9:00 - 17:00</span></div>
+                    <div>
+                      <span>Dilluns - Divendres</span><br>
+                      <span>9:00 - 17:00</span>
+                    </div>
                   </li>
                 </ul>
               </address>
@@ -271,18 +287,18 @@
           </div>
         </section>
     
-        <!-- Sección de Redes Sociales y Derechos -->
+        <!-- Secció de Xarxes Socials i Drets -->
         <div class="footer-bottom">
           <ul class="social-icons">
             <li><a href="tel:+34 934137564" class="social-icon" aria-label="Phone"><i class="fa fa-phone"></i></a></li>
             <li><a href="#" class="social-icon" aria-label="Schedule" id="schedule-icon"><i class="fa fa-clock"></i></a></li>
-              <div id="schedule-popup" class="popup">
-                <div class="popup-content">
-                  <h2>Horari</h2>
-                  <p>Dilluns - Divendres (9:00 - 17:00)</p>
-                  <button id="close-popup">Tancar</button>
-                </div>
+            <div id="schedule-popup" class="popup">
+              <div class="popup-content">
+                <h2>Horari</h2>
+                <p>Dilluns - Divendres (9:00 - 17:00)</p>
+                <button id="close-popup">Tancar</button>
               </div>
+            </div>
             <li><a href="https://www.instagram.com/aessestudiants?igsh=MXIwcGs5Z2toeXh4Mw==" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
             <li><a href="mailto:aess.estudiants@upc.edu" class="social-icon" aria-label="Mail"><i class="fa fa-envelope"></i></a></li>
           </ul>
@@ -291,14 +307,12 @@
         </div>
       </div>
     </div>
-    </footer>
-
+  </footer>
 
   <!-- Scripts -->
   <script src="js/carousel.js" defer></script>
   <script src="js/calendar.js" defer></script>
   <script src="js/faqs.js" defer></script>
   <script src="js/schedule.js" defer></script>
-
 </body>
 </html>
