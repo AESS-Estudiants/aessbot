@@ -14,6 +14,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
   <title>AESS Estudiants</title>
   <meta name="description" content="Web associó AESS Estudiants">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("mLcw4VXd7GiyPflDs"); // Substitueix amb la teva clau pública d'EmailJS
+    })();
+  </script>
+
 </head>
 
 <body>
@@ -33,120 +40,69 @@
       <div class="hero">
         <div class="hero-content">
           <h1>Contacte</h1>
-          <p>Per si encara tens dubtes...</p>
+          <p>Tenim ganes de saber de tu!</p>
         </div>
       </div>
     </section>
   </header>
   <main id="main-content">
-
     <!-- Contact Section Wrapper -->
     <section class="contact-wrapper">
-      <div class="contact-text">
-        <h2>Want to collaborate on sustainability?</h2>
-        <p>Fill out the form, and let's work together towards a sustainable future. Our team will reach out to discuss
-          how we can support your green goals.</p>
-      </div>
-      <section class="contact-info">
-        <h2>Contact Information</h2>
-        <address>
-          <p>Email: <a href="mailto:info@sustainablefuture.org">info@sustainablefuture.org</a></p>
-          <p>Phone: <a href="tel:1234567890">123-456-7890</a></p>
-          <p>Address: 123 Green Avenue, Earth</p>
-        </address>
-      </section>
       <!-- Form section -->
       <section class="form-container">
-        <h2 id="form-title">Contact Form</h2>
-        <form action="#" method="POST" aria-labelledby="form-title">
-
-          <!-- Fieldset for Personal Data -->
+        <h2 id="form-title">Formulari de contacte</h2>
+        <form id="contact-form">
           <fieldset>
-            <legend>Personal Data</legend>
-
-            <div class="form-row">
-              <label for="name">Name<sup>*</sup></label>
-              <input type="text" id="name" name="name" required aria-required="true" placeholder="Enter your full name">
+            <legend>Dades Personals</legend>
+            <div class="form-group">
+              <label for="name">Nom<sup>*</sup></label>
+              <input type="text" id="name" name="from_name" required placeholder="Escriu el teu nom">
             </div>
 
-            <div class="form-row">
+            <div class="form-group">
               <label for="email">Email<sup>*</sup></label>
-              <input type="email" id="email" name="email" required aria-required="true"
-                placeholder="e.g., user@example.com">
+              <input type="email" id="email" name="reply_to" required placeholder="Escriu el teu correu">
             </div>
 
-            <div class="form-row phone-group">
-              <div>
-                <label for="country-code">Country Code<sup>*</sup></label>
-                <select id="country-code" name="country-code" required aria-required="true">
-                  <option value="" disabled selected>Choose country</option>
-                  <optgroup label="Europe">
-                    <option value="+33">France (+33)</option>
-                    <option value="+49">Germany (+49)</option>
-                    <option value="+34">Spain (+34)</option>
-                    <option value="+44">UK (+44)</option>
-                  </optgroup>
-                  <optgroup label="America">
-                    <option value="+1">USA (+01)</option>
-                    <option value="+52">Mexico (+52)</option>
-                  </optgroup>
-                </select>
-              </div>
-
-              <div>
-                <label for="phone">Phone<sup>*</sup></label>
-                <input type="tel" id="phone" name="phone" required aria-required="true"
-                  placeholder="e.g., +1 555 123 4567">
-              </div>
+            <div class="form-group">
+              <label for="phone">Telèfon</label>
+              <input type="tel" id="phone" name="phone" placeholder="e.g., +34 600 123 456">
             </div>
           </fieldset>
 
-          <!-- Fieldset for Other Information -->
           <fieldset>
-            <legend>Message Information</legend>
-
-            <div class="form-row">
-              <label>User Type<sup>*</sup></label>
-              <div class="radio-options" role="radiogroup">
-                <label>
-                  <input type="radio" name="user-type" value="user" required aria-required="true">
-                  User
-                </label>
-                <label>
-                  <input type="radio" name="user-type" value="company">
-                  Company
-                </label>
-                <label>
-                  <input type="radio" name="user-type" value="ngo">
-                  NGO
-                </label>
+            <legend>Informació del Missatge</legend>
+            <div class="form-group">
+              <label>Tema<sup>*</sup></label>
+              <div class="radio-options">
+                <label><input type="radio" name="user-type" value="AESS Estudiants" required> AESS Estudiants</label>
+                <label><input type="radio" name="user-type" value="AESSBot"> AESSBot 2025</label>
+                <label><input type="radio" name="user-type" value="Altres"> Altres</label>
               </div>
             </div>
 
-            <div class="form-row">
-              <label for="subject">Subject</label>
-              <input type="text" id="subject" name="subject" placeholder="Brief subject (optional)">
+            <div class="form-group">
+              <label for="subject">Motiu<sup>*</sup></label>
+              <input type="text" id="subject" name="subject" required placeholder="Escriu el motiu del missatge">
             </div>
 
-            <div class="form-row">
-              <label for="message">Message<sup>*</sup></label>
-              <textarea id="message" name="message" rows="5" required aria-required="true"
-                placeholder="Write your message here"></textarea>
+            <div class="form-group">
+              <label for="message">El teu missatge<sup>*</sup></label>
+              <textarea id="message" name="message" required="" placeholder="Escriu el teu missatge aquí..." style="height: 183px;"></textarea>
             </div>
           </fieldset>
 
-          <!-- Consent -->
-          <div class="form-row checkbox">
-            <input type="checkbox" id="accept" name="accept" required aria-required="true">
-            <label for="accept">I accept the <a href="#" aria-label="Privacy Policy">privacy policy</a></label>
+          <div class="form-group checkbox">
+            <input type="checkbox" id="accept" name="accept" required>
+            <label for="accept">Accepto <a href="#">la política de privacitat</a></label>
           </div>
 
-          <!-- Submit Button -->
-          <button type="submit" class="submit-button" aria-label="Send Message">Send Message</button>
+          <div class="download-button">
+            <button type="submit">Enviar</button>
+          </div>
         </form>
       </section>
     </section>
-
   </main>
 
 <footer id="footer">
@@ -227,6 +183,7 @@
 <script src="js/carousel.js" defer></script>
 <script src="js/calendar.js" defer></script>
 <script src="js/schedule.js" defer></script>
+<script src="js/form.js" defer></script>
 
 </body>
 </html>

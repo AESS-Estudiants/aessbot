@@ -1,7 +1,7 @@
 /* Reset simple */
 * {
   margin: 0;
-  padding: 0;
+  /* padding: 0; */
   box-sizing: border-box;
 }
 
@@ -46,7 +46,7 @@
 /* Estilos Generales */
 body {
   font-family: "Red Hat Text", serif;
-  color: var(--dark-blue);
+  /* color: var(--dark-blue); */
   background-color: var(--white);
   font-size: var(--text-size-p);/*20px;*/
 }
@@ -976,24 +976,29 @@ figcaption {
 }
 
 .contact-wrapper {
-  display: grid;
-  grid-template-areas: 
+  /* display: grid; */
+  /* grid-template-areas: 
     "ctext"
     "form"
-    "info";
+    "info"; */
+  display: flex;
+  justify-content: center;
   justify-items: center;
   align-items: center;
   gap: 24px;
   padding: 48px 8px;
 }
 
-@media (min-width: 768px) {
+
+
+
+/* @media (min-width: 768px) {
   .contact-wrapper {
   grid-template-areas: 
     "ctext form"
     "info form";
 }
-}
+} */
 
 .contact-text{
   width: 90%;
@@ -1005,20 +1010,22 @@ figcaption {
   align-self: start;
 }
 
-.form-container{
-  grid-area: form;
-}
+/* .form-container{
+  width: 80%;
+  padding: 16px;
+  margin: 0 auto;
+} */
 
 .contact-text h2{
   margin-bottom: .5rem;
 }
 
-@media (min-width: 768px) {
+/* @media (min-width: 768px) {
   .contact-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
   }
-}
+} */
 
 
 /* Contact Form Section */
@@ -1030,8 +1037,11 @@ figcaption {
 }
 
 .form-container {
-  width: 100%;
+  /* width: 100%;
+  padding: 16px; */
+  width: 80%;
   padding: 16px;
+  margin: 0 auto;
 }
 
 .form-container label {
@@ -1039,6 +1049,7 @@ figcaption {
   margin-bottom: 5px;
   color: var(--dark-blue);/*green);*/
   font-weight: bold;
+  width: 100%;
 }
 
 .form-container input,
@@ -1118,22 +1129,6 @@ legend {
 }
 
 
-/* Flexbox for phone and country code */
-.phone-group {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 16px; 
-}
-
-
-.phone-group select {
-  width: 100%; 
-  padding: 8px;
-  margin-bottom: 16px;
-  border: 1px solid var(--lighter-gray);
-  border-radius: 5px;
-}
-
 /* User Type Field with Radio Buttons */
 .user-type {
   margin-bottom: 16px;
@@ -1191,22 +1186,90 @@ address {
   font-style: normal;
 }
 
-/* .but-register {
-    background-color: #4CAF50;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
-.but-register:hover {
-    background-color: #45a049;
-} */
+fieldset {
+  border: 2px solid var(--blue-border);
+  border-radius: 12px;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--lighter-blue);
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 5px;
+  color: var(--lighter-gray);
+  width: 30%;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--blue-border);
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--darker-gray);
+  background-color: var(--white);
+  transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--lighter-blue);
+  outline: none;
+}
+
+
+.radio-options {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-left: 5%;
+}
+
+.radio-options label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+}
+
+@media (max-width: 600px) {
+  .radio-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+.radio-options input {
+  margin-right: 10px;
+  width: auto;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox input {
+  width: auto;
+  margin-right: 8px;
+}
+
+.checkbox a {
+  color: var(--lighter-blue);
+}
 
 
 /************ FAQs *****************/
