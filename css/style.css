@@ -765,7 +765,7 @@ figcaption {
 } */
 
 .header-section {
-  margin: 50px;
+  margin: 50px 0;
 }
 .header-section h2 {
   margin-bottom: 18px;
@@ -1015,23 +1015,39 @@ table {
 
 .contact-form-section {
   background: var(--light-beige);
-  padding: 40px 18px;
   display: flex;
   justify-content: center;
+  text-align: left;
 }
 
 .form-container {
-  width: 80%;
-  padding: 16px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 50px 0; 
+  padding: 50px;
+  border: 1px solid var(--blue-border);
+  border-radius: 8px;
 }
 
+.form-group {
+  display: flex;
+  align-items: start;
+  margin: 50px 0;
+  flex-flow: column;
+}
+
+.form-group label {
+  margin-bottom: 10px;
+}
+
+.form-group-terms {
+  display: flex;
+  align-items: center;
+  margin: 50px 0;
+}
 .form-container label {
   display: block;
-  margin-bottom: 5px;
   color: var(--dark-blue);
   font-weight: bold;
-  width: 100%;
 }
 
 .form-container input,
@@ -1039,13 +1055,13 @@ table {
   width: 100%;
   padding: 8px;
   margin-bottom: 16px;
-  border: 1px solid var(--lighter-gray);
+  border: 1px solid color-mix(in srgb, var(--blue-border), transparent 70%);
   border-radius: 5px;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--light-gray);
+  color: color-mix(in srgb, var(--blue-border), transparent 80%);
   font-style: italic;
   font-family: "Red Hat Text", serif;
 }
@@ -1096,10 +1112,10 @@ input[type="checkbox"] {
 
 /* Fieldset Styles */
 fieldset {
-  border: 1px solid var(--lighter-gray);
+  border: 1px solid color-mix(in srgb, var(--blue-border), transparent 70%);
   border-radius: 8px;
-  padding: 16px;
-  margin-bottom: 24px;
+  padding: 0 50px;
+  margin: 25px 0;
 }
 
 legend {
@@ -1202,13 +1218,10 @@ legend {
 
 /* Grups de FAQ */
 .faq-group {
-  margin: 30px auto;
-  width: 70%;
-  max-width: 800px;
-  padding: 20px;
+  margin: 50px 0;
+  padding: 50px;
   border: 1px solid var(--blue-border);
   border-radius: 8px;
-  background-color: var(--light-bg);
 }
 
 .faq-group h2 {
@@ -1245,7 +1258,7 @@ legend {
 }
 
 .faq-items .answer {
-  padding: 10px 15px;
+  padding: 25px;
   background-color: var(--white);
   border: 3px solid var(--blue-border);
   margin: 0;
@@ -1457,5 +1470,22 @@ details:not([open]) .answer {
   .footer-section {
     margin-top: 20px;
     width: 100%;
+  }
+  .faq-group {
+    margin: 50px 0;
+    padding: 15px;
+  }
+  .form-container{
+    padding: 15px;
+  }
+  fieldset {
+    padding: 0 15px;
+    margin: 15px 0;
+  }
+  .form-group {
+    margin: 0;
+  }
+  .form-group-terms{
+    margin: 15px 0;
   }
 }
