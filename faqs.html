@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="cat">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,255 +11,326 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    rel="stylesheet">
   <title>AESS Estudiants</title>
   <meta name="description" content="Web associó AESS Estudiants">
 </head>
+
 <body>
   <a href="#main-content" class="skip-to-main">Skip to Main Content</a>
-  <!-- Header -->
   <header class="home-header">
-    <div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="#" class="active">FAQs</a></li>
-          <li><a href="contact.html">Contacte</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faqs.html" class="active">FAQs</a></li>
+        <li><a href="contact.html">Contacte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main id="main-content">
     <section class="hero-section">
       <div class="hero">
-        <div class="hero-content">
+        <!-- Logo de l'associació afegit per sobre del títol -->
+        <div class="hero-section">
+          <img src="images/LogoAESS.svg" alt="Logo AESS Estudiants" class="hero-logo">
           <h1>FAQs</h1>
           <p>Resolem les teves preguntes</p>
         </div>
       </div>
     </section>
-  </header>
 
-  <!-- Main Content -->
-  <main id="main-content">
-    <!-- Grup: General i Organització -->
-    <div class="faq-group">
-      <h2>General i Organització</h2>
-      <div class="faq-items">
-        <details>
-          <summary>Què és AESS Estudiants?</summary>
-          <div class="answer">
-            <p>AESS Estudiants és una associació d'estudiants de la Universitat Politècnica de Catalunya (UPC) que té com a objectiu promoure l'interès per la tecnologia i la robòtica mitjançant activitats, tallers i competicions com l'AESSBot.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Què és l'AESSBot?</summary>
-          <div class="answer">
-            <p>L'AESSBot és una competició de robòtica, centrada en el minisumo, organitzada per AESS Estudiants. En aquesta edició 2025, els equips han de dissenyar i construir robots autònoms que competeixin en un ring segons un reglament específic, culminant amb una final el 07 de maig.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Qui pot inscriure's?</summary>
-          <div class="answer">
-            <p>L'AESSBot està obert a tots els estudiants de la UPC, tant de grau com de màster. És una oportunitat ideal per treballar en equip, amb grups de fins a 4 persones.</p>
-          </div>
-        </details>
-        <details>
-          <summary>La participació és gratuïta?</summary>
-          <div class="answer">
-            <p>La inscripció és gratuïta. A més, els equips disposaran d'un pressupost subvencionat de 70€ per adquirir material. Cal tenir en compte que, durant el primer taller, s'haurà de dipositar una fiança de 20€ que es retornarà si l'equip competeix a la final.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Puc apuntar-me sol?</summary>
-          <div class="answer">
-            <p>Cap problema! Pots apuntar-te sol, o si ho prefereixes, AESS et buscarà un equip.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Com es comunicarà la informació important als equips?</summary>
-          <div class="answer">
-            <p>Tota la informació important relacionada amb l'AESSBot es comunicarà als equips a través del correu electrònic proporcionat en el moment de la inscripció. És important que els participants revisin regularment el seu correu per no perdre cap detall.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Hi ha algun codi de conducta?</summary>
-          <div class="answer">
-            <p>Sí, els participants han de seguir un codi de conducta que garanteixi el respecte mutu, el bon ús de les instal·lacions i un ambient competitiu saludable.</p>
-          </div>
-        </details>
+    <!-- Main Content -->
+    <div class="container-sidebar">
+      <!-- Grup: General i Organització -->
+      <div class="faq-group">
+        <h2>General i Organització</h2>
+        <div class="faq-items">
+          <details>
+            <summary>Què és AESS Estudiants?</summary>
+            <div class="answer">
+              <p>AESS Estudiants és una associació d'estudiants de la Universitat Politècnica de Catalunya (UPC) que
+                té
+                com a objectiu promoure l'interès per la tecnologia i la robòtica mitjançant activitats, tallers i
+                competicions com l'AESSBot.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Què és l'AESSBot?</summary>
+            <div class="answer">
+              <p>L'AESSBot és una competició de robòtica, centrada en el minisumo, organitzada per AESS Estudiants. En
+                aquesta edició 2025, els equips han de dissenyar i construir robots autònoms que competeixin en un
+                ring
+                segons un reglament específic, culminant amb una final el 07 de maig.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Qui pot inscriure's?</summary>
+            <div class="answer">
+              <p>L'AESSBot està obert a tots els estudiants de la UPC, tant de grau com de màster. És una oportunitat
+                ideal per treballar en equip, amb grups de fins a 4 persones.</p>
+            </div>
+          </details>
+          <details>
+            <summary>La participació és gratuïta?</summary>
+            <div class="answer">
+              <p>La inscripció és gratuïta. A més, els equips disposaran d'un pressupost subvencionat de 70€ per
+                adquirir
+                material. Cal tenir en compte que, durant el primer taller, s'haurà de dipositar una fiança de 20€ que
+                es
+                retornarà si l'equip competeix a la final.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Puc apuntar-me sol?</summary>
+            <div class="answer">
+              <p>Cap problema! Pots apuntar-te sol, o si ho prefereixes, AESS et buscarà un equip.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Com es comunicarà la informació important als equips?</summary>
+            <div class="answer">
+              <p>Tota la informació important relacionada amb l'AESSBot es comunicarà als equips a través del correu
+                electrònic proporcionat en el moment de la inscripció. És important que els participants revisin
+                regularment el seu correu per no perdre cap detall.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Hi ha algun codi de conducta?</summary>
+            <div class="answer">
+              <p>Sí, els participants han de seguir un codi de conducta que garanteixi el respecte mutu, el bon ús de
+                les
+                instal·lacions i un ambient competitiu saludable.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Grup: Tallers i Material -->
+      <div class="faq-group">
+        <h2>Tallers i Material</h2>
+        <div class="faq-items">
+          <details>
+            <summary>Què són els tallers?</summary>
+            <div class="answer">
+              <p>Els tallers són sessions pràctiques i formatives que guiaran els equips des de la concepció fins a la
+                preparació final del robot. S'organitzen cinc tallers guiats – incloent un Taller d'Introducció,
+                Actuadors, Sensors, PCB i Disseny 3D – i dues jornades de seguiment per donar suport en el muntatge i
+                la
+                resolució de dubtes.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Els tallers són d'assistència obligatòria?</summary>
+            <div class="answer">
+              <p>No són d'assistència obligatòria per si sols, però si vols optar a la convalidació d'1 crèdit ECTS
+                hauràs
+                d'assistir-hi i participar a la final de la competició.</p>
+            </div>
+          </details>
+          <details>
+            <summary>He de portar alguna cosa als tallers?</summary>
+            <div class="answer">
+              <p>Durant el primer taller es guiarà als equips per elaborar un llistat de material, de manera que no
+                cal
+                portar res en concret. En els tallers posteriors, els equips gestionaran el material segons les
+                indicacions rebudes.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Hi haurà material o eines disponibles durant els tallers?</summary>
+            <div class="answer">
+              <p>Sí, des de l'associació es facilitaran eines que ajudin els equips a treballar de manera eficient en
+                el
+                desenvolupament dels seus robots.</p>
+            </div>
+          </details>
+          <details>
+            <summary>Com es gestionarà la compra del material?</summary>
+            <div class="answer">
+              <p>Durant el primer taller, els equips elaboraran un llistat de material necessari amb l'ajuda dels
+                organitzadors. A partir d'aquest llistat, AESS coordinarà amb la UPC perquè el material estigui
+                disponible
+                per als tallers següents. Les factures corresponents s'enviaran a <a
+                  href="mailto:aess.estudiants@upc.edu">aess.estudiants@upc.edu</a> amb el concepte
+                <strong>AESSBOT2025-Factures-[NOM_EQUIP]</strong> i només es validaran per als equips que competeixin
+                a
+                la
+                final, amb el pagament realitzat al final de la competició.
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>És possible augmentar el pressupost pel robot?</summary>
+            <div class="answer">
+              <p>L'equip pot optar per despeses addicionals, sempre que el cost total del robot no superi els 100€ i
+                es
+                mantingui el compliment de totes les especificacions reglamentàries. Les despeses addicionals seran a
+                càrrec de l'equip.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Grup: Reglament i Normativa -->
+      <div class="faq-group">
+        <h2>Reglament i Normativa</h2>
+        <div class="faq-items">
+          <details>
+            <summary>Cal que el robot compleixi alguna normativa?</summary>
+            <div class="answer">
+              <p>Sí, tots els robots han de complir amb el reglament oficial de l'AESSBot. Això implica respectar
+                especificacions generals com ara dimensions, pes màxim, cost i altres restriccions. Pots consultar la
+                normativa completa <a href="documentos/normativa.pdf" target="_blank">aquí</a>.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Grup: Convalidació -->
+      <div class="faq-group">
+        <h2>Convalidació</h2>
+        <div class="faq-items">
+          <details>
+            <summary>Es pot convalidar crèdits?</summary>
+            <div class="answer">
+              <p>La convalidació d'1 crèdit ECTS és automàtica per als estudiants de l'ETSETB. Per als estudiants
+                d'altres
+                escoles, la convalidació es sol·licitarà i dependrà de la decisió de cada escola.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Grup: Logística i Ubicació -->
+      <div class="faq-group">
+        <h2>Logística i Ubicació</h2>
+        <div class="faq-items">
+          <details>
+            <summary>On es duran a terme els tallers i la final?</summary>
+            <div class="answer">
+              <p>Tots els tallers i la final de l'AESSBot se celebraran a la UPC Campus Nord. Els detalls sobre les
+                aules
+                i espais específics es comunicaran a través dels canals oficials de l'organització.</p>
+            </div>
+          </details>
+          <details>
+            <summary>És possible venir a l'associació fora dels tallers per fer ús de les eines o fer seguiment del
+              robot?
+            </summary>
+            <div class="answer">
+              <p>Sí, és possible acudir a l'associació fora dels tallers per fer ús de les eines o continuar
+                treballant
+                en
+                el robot. Tot i això, és important avisar amb antelació per coordinar la disponibilitat i assegurar
+                que
+                hi
+                hagi suport suficient.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Grup: Premis -->
+      <div class="faq-group">
+        <h2>Premis</h2>
+        <div class="faq-items">
+          <details>
+            <summary>Hi ha premi?</summary>
+            <div class="answer">
+              <p>Sí, els equips guanyadors rebran premis. Concretament, es preveu:</p>
+              <ul>
+                <li><strong>1ª posició:</strong> fins a 600€ (amb un màxim de 150€ per participant).</li>
+                <li><strong>2ª posició:</strong> fins a 300€ (amb un màxim de 75€ per participant).</li>
+                <li>Si hi ha més de 6 equips, s'atorgarà un <strong>3r premi</strong> per originalitat de fins a 160€
+                  (amb
+                  un màxim de 40€ per participant), valorant tant l'originalitat del disseny com l'estratègia.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
       </div>
     </div>
-
-    <!-- Grup: Tallers i Material -->
-    <div class="faq-group">
-      <h2>Tallers i Material</h2>
-      <div class="faq-items">
-        <details>
-          <summary>Què són els tallers?</summary>
-          <div class="answer">
-            <p>Els tallers són sessions pràctiques i formatives que guiaran els equips des de la concepció fins a la preparació final del robot. S'organitzen cinc tallers guiats – incloent un Taller d'Introducció, Actuadors, Sensors, PCB i Disseny 3D – i dues jornades de seguiment per donar suport en el muntatge i la resolució de dubtes.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Els tallers són d'assistència obligatòria?</summary>
-          <div class="answer">
-            <p>No són d'assistència obligatòria per si sols, però si vols optar a la convalidació d'1 crèdit ECTS hauràs d'assistir-hi i participar a la final de la competició.</p>
-          </div>
-        </details>
-        <details>
-          <summary>He de portar alguna cosa als tallers?</summary>
-          <div class="answer">
-            <p>Durant el primer taller es guiarà als equips per elaborar un llistat de material, de manera que no cal portar res en concret. En els tallers posteriors, els equips gestionaran el material segons les indicacions rebudes.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Hi haurà material o eines disponibles durant els tallers?</summary>
-          <div class="answer">
-            <p>Sí, des de l'associació es facilitaran eines que ajudin els equips a treballar de manera eficient en el desenvolupament dels seus robots.</p>
-          </div>
-        </details>
-        <details>
-          <summary>Com es gestionarà la compra del material?</summary>
-          <div class="answer">
-            <p>Durant el primer taller, els equips elaboraran un llistat de material necessari amb l'ajuda dels organitzadors. A partir d'aquest llistat, AESS coordinarà amb la UPC perquè el material estigui disponible per als tallers següents. Les factures corresponents s'enviaran a <a href="mailto:aess.estudiants@upc.edu">aess.estudiants@upc.edu</a> amb el concepte <strong>AESSBOT2025-Factures-[NOM_EQUIP]</strong> i només es validaran per als equips que competeixin a la final, amb el pagament realitzat al final de la competició.</p>
-          </div>
-        </details>
-        <details>
-          <summary>És possible augmentar el pressupost pel robot?</summary>
-          <div class="answer">
-            <p>L'equip pot optar per despeses addicionals, sempre que el cost total del robot no superi els 100€ i es mantingui el compliment de totes les especificacions reglamentàries. Les despeses addicionals seran a càrrec de l'equip.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-
-    <!-- Grup: Reglament i Normativa -->
-    <div class="faq-group">
-      <h2>Reglament i Normativa</h2>
-      <div class="faq-items">
-        <details>
-          <summary>Cal que el robot compleixi alguna normativa?</summary>
-          <div class="answer">
-            <p>Sí, tots els robots han de complir amb el reglament oficial de l'AESSBot. Això implica respectar especificacions generals com ara dimensions, pes màxim, cost i altres restriccions. Pots consultar la normativa completa <a href="documentos/normativa.pdf" target="_blank">aquí</a>.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-
-    <!-- Grup: Convalidació -->
-    <div class="faq-group">
-      <h2>Convalidació</h2>
-      <div class="faq-items">
-        <details>
-          <summary>Es pot convalidar crèdits?</summary>
-          <div class="answer">
-            <p>La convalidació d'1 crèdit ECTS és automàtica per als estudiants de l'ETSETB. Per als estudiants d'altres escoles, la convalidació es sol·licitarà i dependrà de la decisió de cada escola.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-
-    <!-- Grup: Logística i Ubicació -->
-    <div class="faq-group">
-      <h2>Logística i Ubicació</h2>
-      <div class="faq-items">
-        <details>
-          <summary>On es duran a terme els tallers i la final?</summary>
-          <div class="answer">
-            <p>Tots els tallers i la final de l'AESSBot se celebraran a la UPC Campus Nord. Els detalls sobre les aules i espais específics es comunicaran a través dels canals oficials de l'organització.</p>
-          </div>
-        </details>
-        <details>
-          <summary>És possible venir a l'associació fora dels tallers per fer ús de les eines o fer seguiment del robot?</summary>
-          <div class="answer">
-            <p>Sí, és possible acudir a l'associació fora dels tallers per fer ús de les eines o continuar treballant en el robot. Tot i això, és important avisar amb antelació per coordinar la disponibilitat i assegurar que hi hagi suport suficient.</p>
-          </div>
-        </details>
-      </div>
-    </div>
-
-    <!-- Grup: Premis -->
-    <div class="faq-group">
-      <h2>Premis</h2>
-      <div class="faq-items">
-        <details>
-          <summary>Hi ha premi?</summary>
-          <div class="answer">
-            <p>Sí, els equips guanyadors rebran premis. Concretament, es preveu:</p>
-            <ul>
-              <li><strong>1ª posició:</strong> fins a 600€ (amb un màxim de 150€ per participant).</li>
-              <li><strong>2ª posició:</strong> fins a 300€ (amb un màxim de 75€ per participant).</li>
-              <li>Si hi ha més de 6 equips, s'atorgarà un <strong>3r premi</strong> per originalitat de fins a 160€ (amb un màxim de 40€ per participant), valorant tant l'originalitat del disseny com l'estratègia.</li>
-            </ul>
-          </div>
-        </details>
-      </div>
-    </div>
-
   </main>
 
   <!-- Footer -->
   <footer id="footer">
-    <div class="container">
-      <section class="footer-main">
-        <div class="footer-sections">
-          <h2>AESS Estudiants</h2>
-          <!-- Menú Principal -->
-          <div class="footer-menu">
-            <h3 class="footer-heading">Menu</h3>
-            <nav>
-              <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="faqs.html">FAQs</a></li>
-                <li><a href="contact.html">Contacte</a></li>
-              </ul>
-            </nav>
-          </div>
-          <!-- Enllaços Ràpids -->
-          <div class="quick-links">
-            <h3 class="footer-heading">Quick Links</h3>
-            <nav>
-              <ul>
-                <li><a href="#">Privacy Policy</a></li>
-                <li><a href="#">Terms of Service</a></li>
-              </ul>
-            </nav>
-          </div>
-          <!-- Informació de Contacte -->
-          <div class="footer-contact">
-            <h3 class="footer-heading">Contacte</h3>
-            <address>
-              <ul>
-                <li><i class="fas fa-phone"></i><a href="tel:+34 934137564" aria-label="Phone"><span>(+34) 934137564</span></a></li>
-                <li><i class="fas fa-envelope"></i><a href="mailto:aess.estudiants@upc.edu" aria-label="Email"><span>aess.estudiants@upc.edu</span></a></li>
-                <li><i class="fas fa-map-marker-alt"></i><span>Campus Nord UPC, Barcelona</span></li>
-                <li><i class="fas fa-clock"></i>
-                  <div>
-                    <span>Dilluns - Divendres</span><br>
-                    <span>9:00 - 17:00</span>
-                  </div>
-                </li>
-              </ul>
-            </address>
+    <section class="footer-main">
+      <div class="footer-sections">
+        <!-- <h2 class="secret-text">AESS Estudiants</h2> -->
+
+        <!-- Menú Principal -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Menu</h3>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="contact.html">Contacte</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Enllaços Ràpids -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Quick Links</h3>
+          <nav>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Informació de Contacte -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Contacte</h3>
+          <address>
+            <ul>
+              <li><i class="fas fa-phone"></i><a href="tel:+34 934137564" aria-label="Phone"><span>(+34)
+                    934137564</span></a></li>
+              <li><i class="fas fa-envelope"></i><a href="mailto:aess.estudiants@upc.edu"
+                  aria-label="Email"><span>aess.estudiants@upc.edu</span></a></li>
+              <li><i class="fas fa-map-marker-alt"></i><span>Campus Nord UPC, Barcelona</span></li>
+              <li><i class="fas fa-clock"></i>
+                <div>
+                  <span>Dilluns - Divendres</span><br>
+                  <span>9:00 - 17:00</span>
+                </div>
+              </li>
+            </ul>
+          </address>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer-bottom">
+      <ul class="social-icons">
+        <li><a href="tel:+34 934137564" class="social-icon" aria-label="Phone"><i class="fa fa-phone"></i></a></li>
+        <li><a href="#" class="social-icon" aria-label="Schedule" id="schedule-icon"><i class="fa fa-clock"></i></a>
+        </li>
+        <div id="schedule-popup" class="popup">
+          <div class="popup-content">
+            <h2>Horari</h2>
+            <p>Dilluns - Divendres (9:00 - 17:00)</p>
+            <button id="close-popup">Tancar</button>
           </div>
         </div>
-      </section>
-      <!-- Xarxes Socials i Drets -->
-      <div class="footer-bottom">
-        <ul class="social-icons">
-          <li><a href="tel:+34 934137564" class="social-icon" aria-label="Phone"><i class="fa fa-phone"></i></a></li>
-          <li><a href="#" class="social-icon" aria-label="Schedule" id="schedule-icon"><i class="fa fa-clock"></i></a></li>
-          <div id="schedule-popup" class="popup">
-            <div class="popup-content">
-              <h2>Horari</h2>
-              <p>Dilluns - Divendres (9:00 - 17:00)</p>
-              <button id="close-popup">Tancar</button>
-            </div>
-          </div>
-          <li><a href="https://www.instagram.com/aessestudiants?igsh=MXIwcGs5Z2toeXh4Mw==" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="mailto:aess.estudiants@upc.edu" class="social-icon" aria-label="Mail"><i class="fa fa-envelope"></i></a></li>
-        </ul>
-        <p>&copy; 2025 AESS Estudiants. All images come from AESS Estudiants with a <abbr title="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International">CC BY-NC-ND</abbr> license</p>
-      </div>
+        <li><a href="https://www.instagram.com/aessestudiants?igsh=MXIwcGs5Z2toeXh4Mw==" class="social-icon"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="mailto:aess.estudiants@upc.edu" class="social-icon" aria-label="Mail"><i
+              class="fa fa-envelope"></i></a></li>
+      </ul>
+
+      <p>&copy; 2025 AESS Estudiants. All images come from AESS Estudiants with a <abbr
+          title="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International">CC BY-NC-ND</abbr>
+        license
+      </p>
     </div>
   </footer>
 
@@ -268,4 +340,5 @@
   <script src="js/faqs.js" defer></script>
   <script src="js/schedule.js" defer></script>
 </body>
+
 </html>

@@ -11,7 +11,9 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    rel="stylesheet">
   <title>AESS Estudiants</title>
   <meta name="description" content="Web associó AESS Estudiants">
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
@@ -27,28 +29,30 @@
   <a href="#main-content" class="skip-to-main">Skip to Main Content</a>
   <!-- Main Content -->
   <header class="home-header">
-    <div>
-      <nav class="navbar">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="#" class="active">Contacte</a></li>
-        </ul>
-      </nav>
-    </div>
+    <nav class="navbar">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="faqs.html">FAQs</a></li>
+        <li><a href="contact.html" class="active">Contacte</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <main id="main-content">
     <section class="hero-section">
       <div class="hero">
-        <div class="hero-content">
+        <!-- Logo de l'associació afegit per sobre del títol -->
+        <div class="hero-section">
+          <img src="images/LogoAESS.svg" alt="Logo AESS Estudiants" class="hero-logo">
           <h1>Contacte</h1>
           <p>Tenim ganes de saber de tu!</p>
         </div>
       </div>
     </section>
-  </header>
-  <main id="main-content">
+
     <!-- Contact Section Wrapper -->
-    <section class="contact-wrapper">
-      <!-- Form section -->
+    <div class="container-sidebar">
       <section class="form-container">
         <h2 id="form-title">Formulari de contacte</h2>
         <form id="contact-form">
@@ -88,11 +92,12 @@
 
             <div class="form-group">
               <label for="message">El teu missatge<sup>*</sup></label>
-              <textarea id="message" name="message" required="" placeholder="Escriu el teu missatge aquí..." style="height: 183px;"></textarea>
+              <textarea id="message" name="message" required="" placeholder="Escriu el teu missatge aquí..."
+                style="height: 183px;"></textarea>
             </div>
           </fieldset>
 
-          <div class="form-group checkbox">
+          <div class="form-group-terms checkbox">
             <input type="checkbox" id="accept" name="accept" required>
             <label for="accept">Accepto <a href="#">la política de privacitat</a></label>
           </div>
@@ -102,66 +107,67 @@
           </div>
         </form>
       </section>
-    </section>
+    </div>
   </main>
 
-<footer id="footer">
-<div class="container">
-  <section class="footer-main">
-    <div class="footer-sections">
-      <h2>AESS Estudiants</h2>
+  <!-- Footer -->
+  <footer id="footer">
+    <section class="footer-main">
+      <div class="footer-sections">
+        <!-- <h2 class="secret-text">AESS Estudiants</h2> -->
 
-      <!-- Menú Principal -->
-      <div class="footer-menu">
-        <h3 class="footer-heading">Menu</h3>
-        <nav>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="faqs.html">FAQs</a></li>
-            <li><a href="contact.html">Contacte</a></li>
-          </ul>
-        </nav>
+        <!-- Menú Principal -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Menu</h3>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="faqs.html">FAQs</a></li>
+              <li><a href="contact.html">Contacte</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Enllaços Ràpids -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Quick Links</h3>
+          <nav>
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <!-- Informació de Contacte -->
+        <div class="footer-section">
+          <h3 class="footer-heading">Contacte</h3>
+          <address>
+            <ul>
+              <li><i class="fas fa-phone"></i><a href="tel:+34 934137564" aria-label="Phone"><span>(+34)
+                    934137564</span></a></li>
+              <li><i class="fas fa-envelope"></i><a href="mailto:aess.estudiants@upc.edu"
+                  aria-label="Email"><span>aess.estudiants@upc.edu</span></a></li>
+              <li><i class="fas fa-map-marker-alt"></i><span>Campus Nord UPC, Barcelona</span></li>
+              <li><i class="fas fa-clock"></i>
+                <div>
+                  <span>Dilluns - Divendres</span><br>
+                  <span>9:00 - 17:00</span>
+                </div>
+              </li>
+            </ul>
+          </address>
+        </div>
+
       </div>
+    </section>
 
-      <!-- Enlaces Rápidos -->
-      <div class="quick-links">
-        <h3 class="footer-heading">Quick Links</h3>
-        <nav>
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <!-- Información de Contacto -->
-      <div class="footer-contact">
-        <h3 class="footer-heading">Contacte</h3>
-        <address>
-          <ul>
-            <li><i class="fas fa-phone"></i><a href="tel:+34 934137564" aria-label="Phone"><span>(+34)
-              934137564</span> </a>
-            </li>
-            <li><i class="fas fa-envelope"></i><a href="mailto:aess.estudiants@upc.edu"
-                aria-label="Email"><span>aess.estudiants@upc.edu</span></a>
-            </li>
-            <li><i class="fas fa-map-marker-alt"></i><span>Campus Nord UPC, Barcelona</span>
-            </li>
-            <li><i class="fas fa-clock"></i>
-              <div><span>Dilluns - Divendres</span><br><span>9:00 - 17:00</span></div>
-            </li>
-          </ul>
-        </address>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Sección de Redes Sociales y Derechos -->
-  <div class="footer-bottom">
-    <ul class="social-icons">
-      <li><a href="tel:+34 934137564" class="social-icon" aria-label="Phone"><i class="fa fa-phone"></i></a></li>
-      <li><a href="#" class="social-icon" aria-label="Schedule" id="schedule-icon"><i class="fa fa-clock"></i></a></li>
+    <!-- Footer -->
+    <div class="footer-bottom">
+      <ul class="social-icons">
+        <li><a href="tel:+34 934137564" class="social-icon" aria-label="Phone"><i class="fa fa-phone"></i></a></li>
+        <li><a href="#" class="social-icon" aria-label="Schedule" id="schedule-icon"><i class="fa fa-clock"></i></a>
+        </li>
         <div id="schedule-popup" class="popup">
           <div class="popup-content">
             <h2>Horari</h2>
@@ -169,21 +175,26 @@
             <button id="close-popup">Tancar</button>
           </div>
         </div>
-      <li><a href="https://www.instagram.com/aessestudiants?igsh=MXIwcGs5Z2toeXh4Mw==" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
-      <li><a href="mailto:aess.estudiants@upc.edu" class="social-icon" aria-label="Mail"><i class="fa fa-envelope"></i></a></li>
-    </ul>
+        <li><a href="https://www.instagram.com/aessestudiants?igsh=MXIwcGs5Z2toeXh4Mw==" class="social-icon"
+            aria-label="Instagram"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="mailto:aess.estudiants@upc.edu" class="social-icon" aria-label="Mail"><i
+              class="fa fa-envelope"></i></a></li>
+      </ul>
 
-    <p>&copy; 2025 AESS Estudiants. All images come from <!--<a href="https://www.freepik.com/" class="underline" target="_blank"> -->AESS Estudiants</a> with a <abbr title="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International">CC BY-NC-ND</abbr> license</p>
-  </div>
-</div>
-</footer>
+      <p>&copy; 2025 AESS Estudiants. All images come from AESS Estudiants with a <abbr
+          title="Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International">CC BY-NC-ND</abbr>
+        license
+      </p>
+    </div>
+  </footer>
 
 
-<!-- Scripts -->
-<script src="js/carousel.js" defer></script>
-<script src="js/calendar.js" defer></script>
-<script src="js/schedule.js" defer></script>
-<script src="js/form.js" defer></script>
+  <!-- Scripts -->
+  <script src="js/carousel.js" defer></script>
+  <script src="js/calendar.js" defer></script>
+  <script src="js/schedule.js" defer></script>
+  <script src="js/form.js" defer></script>
 
 </body>
+
 </html>
