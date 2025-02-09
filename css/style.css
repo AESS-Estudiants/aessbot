@@ -130,8 +130,8 @@ sup {
   width: 100%;
   padding: 24px 0;
   background-color: var(--black);
-  background-image: url('../images/Logo_aess_blanc.svg');
-  background-size: 110px auto;
+  background-image: url('../images/CubBlanc.svg');
+  background-size: 60px auto;
   /* Reduïm la mida del logo */
   background-repeat: no-repeat;
   background-position: 20px center;
@@ -1683,10 +1683,6 @@ details:not([open]) .answer {
     letter-spacing: 0px;
   }
 
-  .hero-content .frame {
-
-
-  }
 
   .hero p {
     font-size: 1.3rem;
@@ -1707,7 +1703,7 @@ details:not([open]) .answer {
   }
 
   .countdown-container {
-    max-width: 400px;
+    max-width: 350px;
   }
 
   .calendar-and-legend {
@@ -2089,7 +2085,8 @@ details:not([open]) .answer {
     color: #fff;
     /* Text en blanc */
     margin-top: 0px;
-    margin: 0 0 80px 0 ;
+    margin: 0 0 0px 0 ;
+    flex: 1 !important;
   }
 
   .container .content .info i {
@@ -2119,6 +2116,7 @@ details:not([open]) .answer {
     line-height: 22px;
     color: #000000;
     margin-bottom: 5px;
+    padding: 10px;
   }
 
   .hero-content .frame {
