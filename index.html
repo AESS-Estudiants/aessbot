@@ -12,12 +12,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Montserrat&display=swap" rel="stylesheet">
   <link
-    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900&display=swap"
     rel="stylesheet">
 
   <title>AESSBot 2025</title>
   <meta name="description"
     content="Web de la competició AESSBot 2025 - Organitzada per AESS Estudiants. Inscripcions obertes per estudiants de la UPC.">
+
 </head>
 
 <body>
@@ -33,32 +34,25 @@
     </nav>
   </header>
 
-
   <main id="main-content">
     <section class="hero-section">
       <div class="hero">
-        <!-- Logo de l'associació afegit per sobre del títol -->
-        <div class="hero-section">
-          <img src="images/LogoAESS.svg" alt="Logo AESS Estudiants" class="hero-logo">
-          <h1>AESSBot 2025</h1>
-          <p>Ens veiem el 07 de maig!</p>
+        <!-- Sunburst de fons que ara ocupa només l'àrea del hero -->
+        <div class="hero-content">
+          <h1>AESSBOT</h1>
+          <div class="frame">
+            <h2>SUMO FIGHT COMPETITION</h2>
+            <h3>7 MAIG 2025</h3>
+          </div>
+          <div class="download-button" style="margin-top: 60px;">
+            <button onclick="window.open('https://forms.gle/HS1dLkhx7CWvooET6', '_blank');">Inscriu-te</button>
+            <p class="small-text">Fins el 25 de febrer</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- <aside class="sidebar-card">
-      <nav>
-        <ul>
-          <li><a href="#overview">La competició</a></li>
-          <li><a href="#activities">Activitats</a></li>
-          <li><a href="#calendar">Calendari</a></li>
-          <li><a href="#normative">Normativa</a></li>
-          <li><a href="#register">Inscripcions</a></li>
-          <li><a href="#partners">Col·laboracions</a></li>
-        </ul>
-      </nav>
-    </aside> -->
-
+    <!-- Resta del contingut de la web -->
     <div class="container-sidebar">
       <!-- Overview Section -->
       <section id="overview">
@@ -66,9 +60,9 @@
           <h2>La competició</h2>
           <p>
             Entra al ring i demostra qui és el rei del Minisumo! El teu repte? Dissenyar el robot definitiu que
-            aconsegueixi fer fora a la resta d'oponents i proclamar-te vencedor.
+            aconsegueixi fer fora del ring a la resta d'oponents i proclamar-te vencedor.
             Preparat per portar les teves habilitats a un altre nivell?
-            <br />
+            <br>
             La competició t’espera, i només els millors dominaran el ring!
           </p>
         </div>
@@ -83,17 +77,62 @@
       <!-- Activitats Section -->
       <section id="activities" class="key-statistics">
         <div class="header-section">
-          <h2>Activitats</h2>
-          <p>Descobreix els tallers i esdeveniments preparats per ajudar-te a dissenyar i perfeccionar el teu robot.</p>
+          <h2>Què inclou?</h2>
+          <p>
+            Per a la construcció del teu robot, et posarem a disposició un conjunt complet d'activitats i recursos
+            pensats per a tot el procés, des de la teoria fins a la pràctica. T'explicarem detalladament què rebràs i
+            com cada component t'ajudarà a portar el teu projecte al següent nivell:
+          </p>
+          <ul>
+            <li><strong>Tallers guiats:</strong> Sessions formatives on aprendràs conceptes des dels bàsics fins als més
+              avançats, incloent programació, control d'actuadors, ús de sensors, disseny de PCB i creació de models 3D.
+            </li>
+            <li><strong>Sessions de seguiment:</strong> Jornades pràctiques per rebre suport personalitzat, resoldre
+              dubtes i optimitzar el muntatge del teu robot.</li>
+            <li><strong>Eines especialitzades:</strong> Accés a eines per la construcció del robot (soldador, banc
+              d'eines, etc.) i recursos tècnics que t'ajudaran en el desenvolupament del teu robot.</li>
+            <li><strong>Material subvencionat:</strong> Suport econòmic per a l'adquisició de components i materials
+              essencials per construir un robot competitiu.</li>
+          </ul>
         </div>
-        <div>
+      </section>
+
+
+
+      <!-- Calendari Section amb Llegenda -->
+      <!-- <section id="calendar" class="key-statistics">
+        <div class="header-section">
+          <h2>Calendari</h2>
+          <p>
+            Consulta el calendari per estar al corrent de totes les dates claus de la competició. Aquí trobaràs els dies dedicats als tallers guiats, els tallers de seguiment i, per descomptat, la data de la final. Així, podràs planificar la teva participació i assegurar-te que no et perdis cap esdeveniment important.
+          </p>
+          <div class="calendar-and-legend">
+            <div class="calendar">
+              <div class="calendar-header">
+                <button class="prev-month">&lt;</button>
+                <h2 class="current-month">Febrer 2025</h2>
+                <button class="next-month">&gt;</button>
+              </div>
+              <div class="calendar-grid">
+              </div>
+            </div>
+            <div class="calendar-legend">
+              <h3>Llegenda</h3>
+              <ul>
+                <li><span class="legend-icon guided"></span> Tallers guiats</li>
+                <li><span class="legend-icon followup"></span> Tallers de seguiment</li>
+                <li><span class="legend-icon final"></span> Final</li>
+                <li><span class="legend-icon inscriptions"></span> Final Inscripcions</li>
+              </ul>
+            </div>
+          </div>
           <table>
             <caption class="table-header">
               Informació de les activitats
             </caption>
             <thead>
               <tr>
-                <th scope="col">Taller</th>
+                <th scope="col">Activitat</th>
                 <th scope="col">Data</th>
                 <th scope="col">Descripció</th>
                 <th scope="col">Ubicació</th>
@@ -103,8 +142,7 @@
               <tr>
                 <td>Taller Introducció</td>
                 <td>26/02/2025 (11:00 - 13:00)</td>
-                <td>Benvinguda, presentació de la competició i primera comanda de material per equip. Pressupost de 70€
-                  subvencionat (ampliable a 100€ si escau).</td>
+                <td>Benvinguda, presentació de la competició i primera comanda de material per equip. Material subvencionat!</td>
                 <td>Campus Nord UPC A4001</td>
               </tr>
               <tr>
@@ -133,9 +171,7 @@
               </tr>
               <tr>
                 <td rowspan="2">Seguiment</td>
-                <td>
-                  23/04/2025 (11:00 - 13:00)
-                </td>
+                <td>23/04/2025 (11:00 - 13:00)</td>
                 <td rowspan="2">Suport per enllestir els robots.</td>
                 <td rowspan="2">Campus Nord UPC A4001</td>
               </tr>
@@ -156,64 +192,142 @@
             </tfoot>
           </table>
         </div>
+      </section> -->
+
+      <section id="timeline">
+        <h2>Calendari</h2>
+        <p>
+          Consulta el calendari per estar al corrent de totes les dates claus de la competició. Aquí trobaràs els dies
+          dedicats als tallers guiats, els tallers de seguiment i, per descomptat, la data de la final. Així, podràs
+          planificar la teva participació i assegurar-te que no et perdis cap esdeveniment important.
+        </p>
+        <br>
+        <div class="timeline">
+          <div class="container left">
+            <div class="date">26 Feb</div>
+            <i class="icon fa fa-book"></i>
+            <div class="content">
+              <h2>Taller Introducció</h2>
+              <p>Benvinguda, presentació de la competició i primera comanda de material per equip.</p>
+              <p class="info">
+                <span class="time"><i class="fa fa-clock"></i> 11:00 - 13:00</span>
+                <span class="separator">|</span>
+                <span class="location"><i class="fa fa-map-marker"></i> Campus Nord UPC A4001</span>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="date">05 Mar</div>
+            <i class="icon fa fa-cogs"></i>
+            <div class="content">
+              <h2>Taller Actuadors</h2>
+              <p>Introducció a Arduino i control dels actuadors del robot.</p>
+              <p class="info">
+                <span class="time"><i class="fa fa-clock"></i> 11:00 - 13:00</span>
+                <span class="separator">|</span>
+                <span class="location"><i class="fa fa-map-marker"></i> Campus Nord UPC A4001</span>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="date">12 Mar</div>
+            <i class="icon fa fa-eye"></i>
+            <div class="content">
+              <h2>Taller Sensors</h2>
+              <p>Introducció als sensors i primers algorismes del robot.</p>
+              <p class="info">
+                <span class="time"><i class="fa fa-clock"></i> 11:00 - 13:00</span>
+                <span class="separator">|</span>
+                <span class="location"><i class="fa fa-map-marker"></i> Campus Nord UPC A4001</span>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="date">19 Mar</div>
+            <i class="icon fa fa-print"></i>
+            <div class="content">
+              <h2>Taller PCB</h2>
+              <p>Disseny de la placa i soldadura dels components.</p>
+              <p class="info">
+                <span class="time"><i class="fa fa-clock"></i> 11:00 - 13:00</span>
+                <span class="separator">|</span>
+                <span class="location"><i class="fa fa-map-marker"></i> Campus Nord UPC A4001</span>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="date">26 Mar</div>
+            <i class="icon fa fa-3"></i>
+            <div class="content">
+              <h2>Taller Disseny 3D</h2>
+              <p>Disseny 3D del xassis del robot amb Fusion 360.</p>
+              <p class="info">
+                <span class="time"><i class="fa fa-clock"></i> 11:00 - 13:00</span>
+                <span class="separator">|</span>
+                <span class="location"><i class="fa fa-map-marker"></i> Campus Nord UPC A4001</span>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="date">23 Abr</div>
+            <i class="icon fa fa-users"></i>
+            <div class="content">
+              <h2>Tallers de seguiment</h2>
+              <p>Suport per enllestir els robots i resoldre dubtes durant el muntatge.</p>
+              <p class="info">
+                <span class="time"><i class="fa fa-clock"></i> 11:00 - 13:00</span>
+                <span class="separator">|</span>
+                <span class="location"><i class="fa fa-map-marker"></i> Campus Nord UPC A4001</span>
+              </p>
+            </div>
+          </div>
+          <div class="container left">
+            <div class="date">30 Abr</div>
+            <i class="icon fa fa-users"></i>
+            <div class="content">
+              <h2>Tallers de seguiment</h2>
+              <p>Continuació del suport per optimitzar el teu projecte.</p>
+              <p class="info">
+                <span class="time"><i class="fa fa-clock"></i> 11:00 - 13:00</span>
+                <span class="separator">|</span>
+                <span class="location"><i class="fa fa-map-marker"></i> Campus Nord UPC A4001</span>
+              </p>
+            </div>
+          </div>
+          <div class="container right">
+            <div class="date">07 Maig</div>
+            <i class="icon fa fa-trophy"></i>
+            <div class="content">
+              <h2>Competició</h2>
+              <p>Dia de la competició: el robot es presenta al ring per competir.</p>
+              <p class="info">
+                <span class="time"><i class="fa fa-clock"></i> 11:00 - 13:00</span>
+                <span class="separator">|</span>
+                <span class="location"><i class="fa fa-map-marker"></i> Campus Nord UPC A4001</span>
+              </p>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <!-- Calendari Section amb Llegenda -->
-      <section id="calendar">
-        <div class="header-section">
-          <h2>Calendari</h2>
-          <p>Aquí trobareu les dates claus de la competició.</p>
-        </div>
-        <div class="calendar-and-legend">
-          <div class="calendar">
-            <div class="calendar-header">
-              <button class="prev-month">&lt;</button>
-              <h2 class="current-month">Febrer 2025</h2>
-              <button class="next-month">&gt;</button>
-            </div>
-            <div class="calendar-grid">
-              <div class="day-name">Dl</div>
-              <div class="day-name">Dt</div>
-              <div class="day-name">Dc</div>
-              <div class="day-name">Dj</div>
-              <div class="day-name">Dv</div>
-              <div class="day-name">Ds</div>
-              <div class="day-name">Dg</div>
-              <!-- Dies del mes -->
-              <div class="day">1</div>
-              <div class="day">2</div>
-              <div class="day">3</div>
-              <!-- ... més dies ... -->
-            </div>
-          </div>
-          <div class="calendar-legend">
-            <h3>Llegenda</h3>
-            <ul>
-              <li><span class="legend-icon guided"></span> Tallers guiats</li>
-              <li><span class="legend-icon followup"></span> Tallers de seguiment</li>
-              <li><span class="legend-icon final"></span> Final</li>
-              <li><span class="legend-icon inscriptions"></span> Final Inscripcions</li>
-            </ul>
-          </div>
-        </div>
-      </section>
+
+
+
 
       <!-- Normativa Section -->
       <section id="normative">
         <div class="header-section">
           <h2>Normativa</h2>
-          <p>Consulta les regles bàsiques i especificacions per competir a l’AESSBot.
-            <br />
-            Respectar la normativa és clau per gaudir de la competició!
+          <p>Consulta les regles bàsiques i especificacions per competir a l'AESSBot.
+            <br>
           </p>
         </div>
         <div class="download-button">
-          <button id="download-btn">Descarregar PDF</button>
+          <button id="download-btn">Descarrega PDF</button>
           <script>
             document.getElementById('download-btn').addEventListener('click', () => {
               window.open('documentos/normativa_v1.pdf', '_blank');
             });
-
           </script>
         </div>
       </section>
@@ -223,13 +337,13 @@
         <div class="header-section">
           <h2>Inscripcions</h2>
           <p>
-            Inscriu-te entre el dilluns 10 de febrer i el divendres 25 de febrer.
-            <br />
+            Inscripcions obertes fins el dimarts 25 de febrer.
+            <br>
             La inscripció és gratuïta i es pot realitzar de forma individual o en equips (fins a 4 persones).
           </p>
         </div>
         <div class="download-button">
-          <button onclick="window.open('https://forms.gle/HS1dLkhx7CWvooET6', '_blank');">Registra't</button>
+          <button onclick="window.open('https://forms.gle/HS1dLkhx7CWvooET6', '_blank');">Inscriu-te</button>
         </div>
       </section>
 
@@ -252,7 +366,6 @@
           </div>
         </div>
       </section>
-
     </div>
   </main>
 
@@ -260,9 +373,6 @@
   <footer id="footer">
     <section class="footer-main">
       <div class="footer-sections">
-        <!-- <h2 class="secret-text">AESS Estudiants</h2> -->
-
-        <!-- Menú Principal -->
         <div class="footer-section">
           <h3 class="footer-heading">Menu</h3>
           <nav>
@@ -273,8 +383,6 @@
             </ul>
           </nav>
         </div>
-
-        <!-- Enllaços Ràpids -->
         <div class="footer-section">
           <h3 class="footer-heading">Quick Links</h3>
           <nav>
@@ -284,8 +392,6 @@
             </ul>
           </nav>
         </div>
-
-        <!-- Informació de Contacte -->
         <div class="footer-section">
           <h3 class="footer-heading">Contacte</h3>
           <address>
@@ -304,11 +410,9 @@
             </ul>
           </address>
         </div>
-
       </div>
     </section>
 
-    <!-- Secció de Xarxes Socials i Drets -->
     <div class="footer-bottom">
       <ul class="social-icons">
         <li><a href="tel:+34 934137564" class="social-icon" aria-label="Phone"><i class="fa fa-phone"></i></a></li>
@@ -338,6 +442,8 @@
   <script src="js/calendar.js" defer></script>
   <script src="js/faqs.js" defer></script>
   <script src="js/schedule.js" defer></script>
+  <script src="js/timeline.js"></script>
+
 </body>
 
 </html>

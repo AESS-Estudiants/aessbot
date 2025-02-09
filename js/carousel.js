@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Array d'imatges dinàmicament
     const images = [
-        'imatge1.jpg',
-        'imatge2.jpg',
-        'imatge3.jpg',
-        'imatge4.jpg',
-        'imatge5.jpg',
-        'imatge6.jpg',
+        'imatge7.png',
+        'imatge8.png',
+        //'imatge9.png',
+        //'imatge10.png',
+        //'imatge7.jpg',
+        //'imatge4.jpg',
+        //'imatge5.jpg',
+        //'imatge6.jpg',
     ];
 
     // Añade dinámicamente las imágenes

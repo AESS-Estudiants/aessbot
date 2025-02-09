@@ -11,15 +11,23 @@ body {
   padding-top: 74px;
 }
 
+@font-face {
+  font-family: 'Franklin'; /* Nom que usaràs per referenciar la font */
+  src: url('../fonts/Franklin_Gothic_Heavy_Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   /* Paleta de blancs i blaus */
   --blue: #71AFFF;               /* Blau clar */
-  --dark-blue: #0A0943;           /* Blau fosc, gairebé negre */
+  --darker-blue-2: #0A0943;           /* Blau fosc, gairebé negre */
   --darker-blue: #003476;         /* Blau més fosc */
-  --darker-blue-2: #001F3F;       /* Blau molt fosc */
+  --black: #001F3F;       /* Blau molt fosc */
   --light-blue: #B0EFFF;          /* Blau molt clar */
   --lighter-blue: #AEDBFF;         /* Blau suau */
   --white: #FFFFFF;
+  --black: #000000;
   --light-gray: #E0E0E0;
   --lighter-gray: #F5F5F5;
   --blue-border: #182271;
@@ -44,6 +52,10 @@ body {
   --width-aside: 13%;
 
   --light-beige: #F0F8FF;         /* Un to molt suau, com l’AliceBlue */
+  --red-cartell: #e12524;
+  --beige-cartell: #f7eac1;
+  --dark-gray: #424242;
+  --blue-cartell: #6c8ac7;
 }
 
 /* Estils Generals */
@@ -65,23 +77,28 @@ p {
 
 h1 {
   font-size: 4rem;
-  font-family: "Playfair Display", serif;
+  font-family: "Franklin", serif;
 }
 
 h2 {
   font-size: 2.5rem;
   line-height: 3rem;
-  font-family: "Lora", serif;
+  font-family: "Franklin", serif;
 }
 
 h3 {
   font-size: 1.3rem;
-  font-family: "Lora", serif;
+  font-family: "Franklin", serif;
 }
 
 sup {
   font-size: 0.8rem;
   color: var(--orange);
+}
+
+.small-text {
+  margin: 10px 0px;
+  font-size: 0.9rem !important;
 }
 
 .skip-to-main {
@@ -104,9 +121,9 @@ sup {
   position: fixed;
   width: 100%;
   padding: 24px 0;
-  background-color: var(--darker-blue-2);
-  background-image: url('../images/CubBlanc.svg');
-  background-size: 60px auto;  /* Reduïm la mida del logo */
+  background-color: var(--black);
+  background-image: url('../images/Logo_aess_blanc.svg');
+  background-size: 110px auto;  /* Reduïm la mida del logo */
   background-repeat: no-repeat;
   background-position: 20px center; /* Logo centrat verticalment */
   z-index: 20;
@@ -131,8 +148,8 @@ sup {
   transition: color 0.3s ease, background-color 0.3s ease;
 }
 .navbar a:hover {
-  background-color: var(--blue);
-  color: var(--dark-blue);
+  background-color: var(--white);
+  color: var(--black);
   border-radius: 5px;
 }
 
@@ -152,8 +169,8 @@ sup {
   left: 0;
 }
 .navbar a.active {
-  background-color: var(--blue);
-  color: var(--dark-blue);
+  background-color: var(--white);
+  color: var(--black);
   border-radius: 5px;
 }
 
@@ -222,23 +239,75 @@ sup {
   transform: translateY(-50%) scale(1.1);
 }
 
+
+
+
+
 .hero {
-  margin: 4% auto 0 auto;
-  height: 300px;
-  background-color: var(--white);
-  background-image: url(../images/robot_left.svg), url(../images/robot_right.svg);
-  background-size: contain;
-  background-repeat: no-repeat, no-repeat;
-  background-position: left center, right center;
+  position: relative;
+  margin: 0 auto;
+  height: 500px;
+  background-color: #000;
+  /* Las capas se especifican separadas por comas:
+     - La primera capa: imagen izquierda.
+     - La segunda capa: imagen derecha.
+     - La tercera capa: el sunburst, que se pintará en la parte inferior.
+  */
+  background-image: 
+    url(../images/robot_left.svg), 
+    url(../images/robot_right.svg), 
+    repeating-conic-gradient(from 0deg at center, var(--beige-cartell) 0deg 10deg, var(--red-cartell) 10deg 20deg);
+  /* Define el tamaño de cada capa: las imágenes se muestran al 30% y el sunburst cubre toda la sección */
+  background-size: 30%, 30%, cover;
+  /* Evita repeticiones en las dos primeras capas, y tampoco en el sunburst */
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  /* Posición de las imágenes y del sunburst:
+     - Las imágenes se posicionan a la izquierda y derecha respectivamente.
+     - El sunburst se centra.
+  */
+  background-position: calc(0% + 50px) center, calc(100% - 50px) center, center;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 92%;
+  width: 100%;
   max-width: 1350px;
 }
 
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content .frame {
+  background-color: black; 
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.hero-content h1 {
+  font-family: "Franklin";
+  color: black;
+  font-size: 6rem; /* Cambia este valor según lo que necesites */
+}
+
+.hero-content h2 {
+  font-family: "Franklin";
+  color: white;
+  font-size: 2rem; /* Cambia este valor según lo que necesites */
+}
+
+.hero-content h3 {
+  font-family: "Franklin";
+  color: var(--blue-cartell);
+  font-size: 1.2rem; /* Cambia este valor según lo que necesites */
+}
+
+
 .hero-section {
   text-align: center;
+  background-color: black;
 }
 
 .hero-logo {
@@ -246,17 +315,28 @@ sup {
 }
 
 .hero .hero-section h1 {
-  font-family: "Lora", serif;
-  color: var(--dark-blue);
+  font-family: "Franklin";
+  color: var(--white);
 }
 
 .hero p {
-  font-size: 2.2rem;
-  color: var(--dark-blue);
-  font-style: oblique;
-  opacity: 0.8;
+  font-size: 1.8rem;
+  color: var(--black);
+  font-family: "Franklin";
+  opacity: 1;
   letter-spacing: 0.5px;
   font-weight: 500;
+}
+
+.hero p.small-text {
+  font-size: 2.2rem; /* Mida diferent, per exemple */
+  color: var(--black);    /* Un color diferent, en aquest cas or */
+  font-family: "Franklin", sans-serif; /* Font diferent */
+  opacity: 1;        /* Totalment opac */
+  letter-spacing: 1px;
+  font-weight: 700;
+  max-width: 30ch; 
+  margin: 10px 0px;
 }
 
 /* @media (max-width: 768px) {
@@ -329,7 +409,7 @@ sup {
 .calendar-legend h3 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  color: var(--dark-blue);
+  color: var(--black);
 }
 
 .calendar-legend ul {
@@ -356,7 +436,7 @@ sup {
 
 /* Colors per als ítems de la llegenda */
 .legend-icon.guided {
-  background-color: var(--darker-blue-2); /* Blau fosc per als tallers guiats */
+  background-color: var(--black); /* Blau fosc per als tallers guiats */
 }
 
 .legend-icon.followup {
@@ -420,7 +500,7 @@ sup {
 .introduction > div {
   max-width: 800px;
   padding: 18px;
-  color: var(--dark-blue);
+  color: var(--black);
 }
 
 .introduction p {
@@ -462,7 +542,7 @@ sup {
 /* CTA Section */
 .cta-section {
   background: linear-gradient(160deg, var(--light-beige), var(--white));
-  color: var(--dark-blue);
+  color: var(--black);
   padding: 200px 18px;
   text-align: center;
   position: relative;
@@ -493,7 +573,7 @@ sup {
 
 /* Footer */
 #footer {
-  background-color: var(--darker-blue-2);
+  background-color: var(--black);
   color: var(--white);
   padding: 48px 18px;
   line-height: 1.4;
@@ -506,7 +586,7 @@ sup {
 
 
 /* .secret-text {
-  color: var(--darker-blue-2);
+  color: var(--black);
 } */
 
 .footer-main {
@@ -673,7 +753,7 @@ footer a:hover {
   background-color: var(--light-blue);
   padding: 118px 18px 48px;
   text-align: center;
-  color: var(--dark-blue);
+  color: var(--black);
 }
 
 .page-header h1 {
@@ -692,7 +772,7 @@ footer a:hover {
 
 .sustainable-goals p {
   font-size: 1.1rem;
-  color: var(--dark-blue);
+  color: var(--black);
   margin-bottom: 32px;
 }
 
@@ -731,7 +811,7 @@ figcaption {
 }
 
 .goal-item h3 {
-  color: var(--dark-blue);
+  color: var(--black);
   margin-bottom: 8px;
 }
 
@@ -779,6 +859,16 @@ figcaption {
   margin-bottom: var(--margin-default);
 }
 
+.header-section ul {
+  text-align: justify;
+}
+
+.header-section ul li {
+  text-align: justify;
+}
+
+
+
 table {
   text-align: left;
 }
@@ -806,14 +896,14 @@ table {
 } */
 
 .key-statistics th {
-  background-color: var(--darker-blue);
+  background-color: var(--black);
   color: var(--white);
   font-size: 1.2rem;
 }
 
 .key-statistics .table-header {
   position: relative;
-  background-color: var(--darker-blue);
+  background-color: var(--black);
   color: var(--white);
   font-weight: bold;
   font-size: 1.2rem;
@@ -826,7 +916,7 @@ table {
 }
 
 .key-statistics tfoot tr td {
-  background-color: var(--darker-blue);
+  background-color: var(--black);
   font-weight: bold;
   color: white;
   text-align: center;
@@ -873,9 +963,9 @@ table {
   padding: 10px 20px;
   width: 230px;
   height: 30px;
-  background-color: var(--darker-blue-2);
+  background-color: var(--blue-cartell);
   color: var(--white);
-  border: 2px solid var(--darker-blue-2);
+  border: 2px solid var(--blue-cartell);
   border-radius: 5px;
   font-size: 1.5rem;
   font-weight: bold;
@@ -887,8 +977,8 @@ table {
 
 .download-button button:hover {
   background-color: var(--white);
-  color: var(--blue-button);
-  border: 2px solid var(--blue-button);
+  color: var(--blue-cartell);
+  border: 2px solid var(--blue-cartell);
 }
 
 .download-button button:active {
@@ -917,7 +1007,7 @@ table {
   box-shadow: var(--light-shadow);
   text-align: center;
   z-index: 9;
-  border: 5px solid var(--blue-border);
+  border: 5px solid var(--black);
   transform: translateY(-50%);
   overflow-wrap: break-word; /* Assegura que el text es trenqui dins el contenidor */
   word-wrap: break-word; /* Compatibilitat amb navegadors antics */
@@ -954,7 +1044,7 @@ table {
 }
 
 .sidebar-card ul li a {
-  color: var(--darker-blue-2);
+  color: var(--black);
   text-decoration: none;
   transition: color 0.3s, transform 0.3s, background-color 0.3s;
   display: block;
@@ -964,7 +1054,7 @@ table {
 
 .sidebar-card ul li a:hover {
   color: var(--white);
-  background-color: var(--darker-blue-2);
+  background-color: var(--black);
   box-shadow: var(--light-shadow);
 }
 
@@ -1025,7 +1115,7 @@ table {
   width: 100%;
   margin: 50px 0; 
   padding: 50px;
-  border: 1px solid var(--blue-border);
+  border: 1px solid var(--black);
   border-radius: 8px;
 }
 
@@ -1047,7 +1137,7 @@ table {
 }
 .form-container label {
   display: block;
-  color: var(--dark-blue);
+  color: var(--black);
   font-weight: bold;
 }
 
@@ -1056,13 +1146,13 @@ table {
   width: 100%;
   padding: 8px;
   margin-bottom: 16px;
-  border: 1px solid color-mix(in srgb, var(--blue-border), transparent 70%);
+  border: 1px solid color-mix(in srgb, var(--black), transparent 70%);
   border-radius: 5px;
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: color-mix(in srgb, var(--blue-border), transparent 80%);
+  color: color-mix(in srgb, var(--black), transparent 80%);
   font-style: italic;
   font-family: "Red Hat Text", serif;
 }
@@ -1108,12 +1198,12 @@ input[type="checkbox"] {
 }
 
 .submit-button:hover {
-  background-color: var(--dark-blue);
+  background-color: var(--black);
 }
 
 /* Fieldset Styles */
 fieldset {
-  border: 1px solid color-mix(in srgb, var(--blue-border), transparent 70%);
+  border: 1px solid color-mix(in srgb, var(--black), transparent 70%);
   border-radius: 8px;
   padding: 0 50px;
   margin: 25px 0;
@@ -1121,7 +1211,7 @@ fieldset {
 
 legend {
   font-size: 1.2rem;
-  color: var(--dark-blue);
+  color: var(--black);
   font-weight: bold;
   margin-bottom: 8px;
   padding: 0 8px;
@@ -1135,7 +1225,7 @@ legend {
 .user-type label {
   display: block;
   font-weight: bold;
-  color: var(--dark-blue);
+  color: var(--black);
   margin-bottom: 8px;
 }
 
@@ -1149,7 +1239,7 @@ legend {
   display: flex;
   align-items: center;
   font-weight: normal;
-  color: var(--dark-blue);
+  color: var(--black);
 }
 
 .radio-options input[type="radio"] {
@@ -1221,7 +1311,7 @@ legend {
 .faq-group {
   margin: 50px 0;
   padding: 50px;
-  border: 1px solid var(--blue-border);
+  border: 1px solid var(--black);
   border-radius: 8px;
 }
 
@@ -1229,7 +1319,7 @@ legend {
   margin-bottom: 15px;
   font-size: 1.75em;
   color: var(--primary-color);
-  border-bottom: 1px solid var(--blue-border);
+  border-bottom: 1px solid var(--black);
   padding-bottom: 5px;
   text-align: center; 
 }
@@ -1255,13 +1345,13 @@ legend {
 
 .faq-items details[open] summary {
   background-color: var(--primary-bg);
-  color: var(--blue-border);
+  color: var(--black);
 }
 
 .faq-items .answer {
   padding: 25px;
   background-color: var(--white);
-  border: 3px solid var(--blue-border);
+  border: 3px solid var(--black);
   margin: 0;
 }
 
@@ -1273,9 +1363,9 @@ summary {
   cursor: pointer;
   list-style-type: none;
   font-weight: bold;
-  background-color: var(--darker-blue-2);
+  background-color: var(--black);
   color: white;
-  border: 2px solid var(--darker-blue-2);
+  border: 2px solid var(--black);
   margin-top: 10px;
   border-radius: 10px;
   transition: border-radius 0.2s ease-in-out;
@@ -1288,8 +1378,8 @@ details[open] summary {
 
 summary:hover {
   background-color: var(--white);
-  color: var(--blue-button);
-  border: 2px solid var(--blue-button);
+  color: var(--dark-gray);
+  border: 2px solid var(--dark-gray);
 }
 
 summary::before {
@@ -1343,7 +1433,7 @@ details:not([open]) .answer {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border: 4px solid var(--darker-blue-2);
+  border: 4px solid var(--black);
   z-index: 1000;
 }
 
@@ -1352,7 +1442,7 @@ details:not([open]) .answer {
 }
 
 .popup-content h2 {
-  color: var(--darker-blue-2);
+  color: var(--black);
   text-align: center;
   font-size: 1.8rem;
 }
@@ -1498,4 +1588,199 @@ details:not([open]) .answer {
     padding-left: 16px;
   }
   
+}
+
+
+/* Timeline */
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: black;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid black;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: black;
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.container.left .date {
+  right: -75px;
+}
+
+.container.right .date {
+  left: -75px;
+}
+
+.container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: #F6D155;
+  border: 2px solid black;
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: black;
+  z-index: 1;
+}
+
+.container.left .icon {
+  right: 56px;
+}
+
+.container.right .icon {
+  left: 56px;
+}
+
+.container .content {
+  padding: 30px 90px 30px 30px;
+  background: var(--blue-cartell);
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.container .content .info {
+  font-size: 0.7rem;  /* Més petit */
+  color: #fff;        /* Text en blanc */
+  margin-top: 5px;
+}
+
+.container .content .info i {
+  color: #fff;        /* Icones en blanc */
+  margin-right: 5px;
+}
+
+.container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  color: black;
+}
+
+.container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: #000000;
+}
+
+@media (max-width: 767.98px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.left::after,
+  .container.right::after {
+    left: 82px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 100px;
+    border-color: transparent black transparent transparent;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .container.left .icon,
+  .container.right .icon {
+    right: auto;
+    left: 146px;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 30px 30px 30px 90px;
+    border-radius: 500px 0 0 500px;
+  }
 }
