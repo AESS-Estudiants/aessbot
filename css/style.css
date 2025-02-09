@@ -4,6 +4,7 @@
   /* padding: 0; */
   box-sizing: border-box;
 }
+
 body {
   position: relative;
   height: 100%;
@@ -12,7 +13,8 @@ body {
 }
 
 @font-face {
-  font-family: 'Franklin'; /* Nom que usaràs per referenciar la font */
+  font-family: 'Franklin';
+  /* Nom que usaràs per referenciar la font */
   src: url('../fonts/Franklin_Gothic_Heavy_Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
@@ -20,12 +22,18 @@ body {
 
 :root {
   /* Paleta de blancs i blaus */
-  --blue: #71AFFF;               /* Blau clar */
-  --darker-blue-2: #0A0943;           /* Blau fosc, gairebé negre */
-  --darker-blue: #003476;         /* Blau més fosc */
-  --black: #001F3F;       /* Blau molt fosc */
-  --light-blue: #B0EFFF;          /* Blau molt clar */
-  --lighter-blue: #AEDBFF;         /* Blau suau */
+  --blue: #71AFFF;
+  /* Blau clar */
+  --darker-blue-2: #0A0943;
+  /* Blau fosc, gairebé negre */
+  --darker-blue: #003476;
+  /* Blau més fosc */
+  --black: #001F3F;
+  /* Blau molt fosc */
+  --light-blue: #B0EFFF;
+  /* Blau molt clar */
+  --lighter-blue: #AEDBFF;
+  /* Blau suau */
   --white: #FFFFFF;
   --black: #000000;
   --light-gray: #E0E0E0;
@@ -33,8 +41,10 @@ body {
   --blue-border: #182271;
 
   /* Substitució d’altres colors per a una paleta de blancs i blaus */
-  --orange: #007BFF;             /* Ara blau, per tot on apareixia l’"orange" */
-  --golden: #0056B3;             /* Variant més fosc */
+  --orange: #007BFF;
+  /* Ara blau, per tot on apareixia l’"orange" */
+  --golden: #0056B3;
+  /* Variant més fosc */
 
   --carousel-color: #F0F0F0;
   --calendar-color: #F9F9F9;
@@ -51,7 +61,8 @@ body {
 
   --width-aside: 13%;
 
-  --light-beige: #F0F8FF;         /* Un to molt suau, com l’AliceBlue */
+  --light-beige: #F0F8FF;
+  /* Un to molt suau, com l’AliceBlue */
   --red-cartell: #e12524;
   --beige-cartell: #f7eac1;
   --dark-gray: #424242;
@@ -96,11 +107,6 @@ sup {
   color: var(--orange);
 }
 
-.small-text {
-  margin: 10px 0px;
-  font-size: 0.9rem !important;
-}
-
 .skip-to-main {
   position: absolute;
   left: -9999px;
@@ -110,11 +116,13 @@ sup {
   color: white;
   opacity: 0;
 }
+
 .skip-to-main:focus {
   left: 50%;
   transform: translateX(-50%);
   opacity: 1;
 }
+
 .navbar {
   top: 0;
   left: 0;
@@ -123,9 +131,11 @@ sup {
   padding: 24px 0;
   background-color: var(--black);
   background-image: url('../images/Logo_aess_blanc.svg');
-  background-size: 110px auto;  /* Reduïm la mida del logo */
+  background-size: 110px auto;
+  /* Reduïm la mida del logo */
   background-repeat: no-repeat;
-  background-position: 20px center; /* Logo centrat verticalment */
+  background-position: 20px center;
+  /* Logo centrat verticalment */
   z-index: 20;
   box-shadow: var(--light-shadow);
 }
@@ -147,6 +157,7 @@ sup {
   position: relative;
   transition: color 0.3s ease, background-color 0.3s ease;
 }
+
 .navbar a:hover {
   background-color: var(--white);
   color: var(--black);
@@ -164,10 +175,12 @@ sup {
   background-color: var(--white);
   transition: width 0.3s ease, left 0.3s ease;
 }
+
 .navbar a:hover::after {
   width: 100%;
   left: 0;
 }
+
 .navbar a.active {
   background-color: var(--white);
   color: var(--black);
@@ -177,9 +190,12 @@ sup {
 /* Estilo del contenedor del carrusel */
 .carousel {
   position: relative;
-  width: 100%; /* Ajuste automático al contenedor padre */
-  max-width: 900px; /* Tamaño más común en la web */
-  height: 500px; /* Más altura para mejor visualización */
+  width: 100%;
+  /* Ajuste automático al contenedor padre */
+  max-width: 900px;
+  /* Tamaño más común en la web */
+  height: 500px;
+  /* Más altura para mejor visualización */
   margin: 0 auto;
   overflow: hidden;
   border-radius: 10px;
@@ -200,10 +216,14 @@ sup {
 
 /* Estilo para las imágenes dentro del carrusel */
 .carousel-images img {
-  width: 100%; /* Ajuste automático al ancho del carrusel */
-  height: 100%; /* Mantiene el aspecto sin deformar */
-  object-fit: cover; /* Recorta la imagen para llenar el espacio sin deformarla */
-  flex: 0 0 100%; /* Garantiza que solo una imagen se muestre a la vez */
+  width: 100%;
+  /* Ajuste automático al ancho del carrusel */
+  height: 100%;
+  /* Mantiene el aspecto sin deformar */
+  object-fit: cover;
+  /* Recorta la imagen para llenar el espacio sin deformarla */
+  flex: 0 0 100%;
+  /* Garantiza que solo una imagen se muestre a la vez */
   display: block;
 }
 
@@ -253,9 +273,9 @@ sup {
      - La segunda capa: imagen derecha.
      - La tercera capa: el sunburst, que se pintará en la parte inferior.
   */
-  background-image: 
-    url(../images/robot_left.svg), 
-    url(../images/robot_right.svg), 
+  background-image:
+    url(../images/robot_left.svg),
+    url(../images/robot_right.svg),
     repeating-conic-gradient(from 0deg at center, var(--beige-cartell) 0deg 10deg, var(--red-cartell) 10deg 20deg);
   /* Define el tamaño de cada capa: las imágenes se muestran al 30% y el sunburst cubre toda la sección */
   background-size: 30%, 30%, cover;
@@ -281,7 +301,7 @@ sup {
 }
 
 .hero-content .frame {
-  background-color: black; 
+  background-color: black;
   padding: 10px;
   border-radius: 10px;
 }
@@ -289,19 +309,22 @@ sup {
 .hero-content h1 {
   font-family: "Franklin";
   color: black;
-  font-size: 6rem; /* Cambia este valor según lo que necesites */
+  font-size: 6rem;
+  /* Cambia este valor según lo que necesites */
 }
 
 .hero-content h2 {
   font-family: "Franklin";
   color: white;
-  font-size: 2rem; /* Cambia este valor según lo que necesites */
+  font-size: 2rem;
+  /* Cambia este valor según lo que necesites */
 }
 
 .hero-content h3 {
   font-family: "Franklin";
   color: var(--blue-cartell);
-  font-size: 1.2rem; /* Cambia este valor según lo que necesites */
+  font-size: 1.2rem;
+  /* Cambia este valor según lo que necesites */
 }
 
 
@@ -311,7 +334,7 @@ sup {
 }
 
 .hero-logo {
-  max-width: 150px; 
+  max-width: 150px;
 }
 
 .hero .hero-section h1 {
@@ -329,14 +352,64 @@ sup {
 }
 
 .hero p.small-text {
-  font-size: 2.2rem; /* Mida diferent, per exemple */
-  color: var(--black);    /* Un color diferent, en aquest cas or */
-  font-family: "Franklin", sans-serif; /* Font diferent */
-  opacity: 1;        /* Totalment opac */
+  font-size: 0.9rem;
+  /* Mida diferent, per exemple */
+  color: var(--black);
+  /* Un color diferent, en aquest cas or */
+  font-family: "Red Hat Text", serif;
+  /* Font diferent */
+  opacity: 1;
+  /* Totalment opac */
   letter-spacing: 1px;
   font-weight: 700;
-  max-width: 30ch; 
-  margin: 10px 0px;
+  max-width: 30ch;
+  margin: 10px 10px;
+  opacity: 1;
+  margin-top: 3px;
+  padding: 0px 5px;
+  border-radius: 8px;
+}
+
+.register-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+  /* Ajusta el valor según tus necesidades */
+
+}
+
+.register-button button {
+  display: block;
+  margin: 0 auto;
+  all: unset;
+  display: inline-block;
+  padding: 10px 20px;
+  width: 230px;
+  height: 30px;
+  background-color: var(--white);
+  color: var(--darker-blue);
+  border: 2px solid var(--white);
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  line-height: 30px;
+}
+
+.register-button button:hover {
+  background-color: var(--white);
+  color: var(--darker-blue);
+  border: 2px solid var(--darker-blue);
+}
+
+.register-button button:active {
+  background-color: var(--darker-blue);
+  color: var(--white);
+  border: 2px solid var(--darker-blue);
 }
 
 /* @media (max-width: 768px) {
@@ -348,6 +421,114 @@ sup {
     font-size: 1.2rem;
   }
 } */
+
+.countdown-container {
+  font-family: 'Arial', sans-serif;
+  /* background: linear-gradient(135deg, #6366f1, #8b5cf6); */
+  background: var(--blue-cartell);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  /* Elimina o comenta la siguiente línea para que la altura se ajuste 
+     al contenido */
+  /* max-height: 200px; */
+  margin: 2rem auto;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  /* Reducido de 1.5rem */
+  font-weight: bold;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.time-segment {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem;
+  /* Reducido de 1rem */
+  border-radius: 0.5rem;
+  min-width: 30px;
+}
+
+.time-value {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.time-label {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.countdown-container p.small-text {
+  font-size: 0.9rem;
+  /* Mida diferent, per exemple */
+  color: var(--black);
+  /* Un color diferent, en aquest cas or */
+  font-family: "Red Hat Text", serif;
+  /* Font diferent */
+  opacity: 1;
+  /* Totalment opac */
+  letter-spacing: 1px;
+  font-weight: 700;
+  max-width: 30ch;
+  margin: 10px 10px;
+  opacity: 1;
+  margin-top: 3px;
+  padding: 5px 5px;
+  border-radius: 8px;
+}
+
+.countdown-container .download-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.countdown-container .download-button button {
+  display: block;
+  margin: 0 auto;
+  all: unset;
+  display: inline-block;
+  padding: 10px 20px;
+  width: 230px;
+  height: 30px;
+  background-color: var(--white);
+  color: var(--darker-blue);
+  border: 2px solid var(--white);
+  border-radius: 25px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  line-height: 30px;
+}
+
+.countdown-container .download-button button:hover {
+  background-color: var(--white);
+  color: var(--darker-blue);
+  border: 2px solid var(--darker-blue);
+}
+
+.countdown-container .download-button button:active {
+  background-color: var(--blue-button-active);
+  color: var(--white);
+  border: 2px solid var(--blue-button);
+}
 
 /* Contenidor del calendari */
 .calendar {
@@ -430,25 +611,30 @@ sup {
   height: 16px;
   display: inline-block;
   margin-right: 8px;
-  border-radius: 4px; /* Ajusta el valor per al grau de redondeig desitjat */
+  border-radius: 4px;
+  /* Ajusta el valor per al grau de redondeig desitjat */
 }
 
 
 /* Colors per als ítems de la llegenda */
 .legend-icon.guided {
-  background-color: var(--black); /* Blau fosc per als tallers guiats */
+  background-color: var(--black);
+  /* Blau fosc per als tallers guiats */
 }
 
 .legend-icon.followup {
-  background-color: var(--light-blue); /* Blau fluix per als tallers de seguiment */
+  background-color: var(--light-blue);
+  /* Blau fluix per als tallers de seguiment */
 }
 
 .legend-icon.final {
-  background-color: #FFBF00; /* Color ambar */
+  background-color: #FFBF00;
+  /* Color ambar */
 }
 
 .legend-icon.inscriptions {
-  background-color: #800000; /* Color granate */
+  background-color: #800000;
+  /* Color granate */
 }
 
 .day-name {
@@ -497,7 +683,7 @@ sup {
   justify-content: center;
 }
 
-.introduction > div {
+.introduction>div {
   max-width: 800px;
   padding: 18px;
   color: var(--black);
@@ -847,9 +1033,11 @@ figcaption {
 .header-section {
   margin: 50px 0;
 }
+
 .header-section h2 {
   margin-bottom: 18px;
 }
+
 .header-section p {
   line-height: 1.5;
   font-size: var(--text-size-p);
@@ -998,9 +1186,10 @@ table {
 .sidebar-card {
   position: fixed;
   top: 50%;
-  left: 20px; 
+  left: 20px;
   width: var(--width-aside);
-  min-width: 250px; /* Amplada mínima per evitar que el contenidor es faci massa estret */
+  min-width: 250px;
+  /* Amplada mínima per evitar que el contenidor es faci massa estret */
   padding: 18px;
   background-color: var(--white);
   border-radius: 8px;
@@ -1009,8 +1198,10 @@ table {
   z-index: 9;
   border: 5px solid var(--black);
   transform: translateY(-50%);
-  overflow-wrap: break-word; /* Assegura que el text es trenqui dins el contenidor */
-  word-wrap: break-word; /* Compatibilitat amb navegadors antics */
+  overflow-wrap: break-word;
+  /* Assegura que el text es trenqui dins el contenidor */
+  word-wrap: break-word;
+  /* Compatibilitat amb navegadors antics */
 }
 
 /* Ajust per a pantalles petites */
@@ -1019,7 +1210,7 @@ table {
     width: 100%;
     margin: 0 auto;
   } */
-  /* .sidebar-card {
+/* .sidebar-card {
     width: 80vw;
     left: 10vw; 
     padding: 12px;
@@ -1113,7 +1304,7 @@ table {
 
 .form-container {
   width: 100%;
-  margin: 50px 0; 
+  margin: 50px 0;
   padding: 50px;
   border: 1px solid var(--black);
   border-radius: 8px;
@@ -1135,6 +1326,7 @@ table {
   align-items: center;
   margin: 50px 0;
 }
+
 .form-container label {
   display: block;
   color: var(--black);
@@ -1321,7 +1513,7 @@ legend {
   color: var(--primary-color);
   border-bottom: 1px solid var(--black);
   padding-bottom: 5px;
-  text-align: center; 
+  text-align: center;
 }
 
 /* Ítems de FAQ dins de cada grup */
@@ -1473,7 +1665,8 @@ details:not([open]) .answer {
   border: 2px solid var(--blue-button);
   color: var(--blue-button);
 }
-.caption-container {
+
+.caption-container {
   position: relative;
 }
 
@@ -1481,12 +1674,12 @@ details:not([open]) .answer {
   .hero {
     height: 200px;
     padding: 0;
-    background-size: 30%;
+    background-size: 30%, 30%, cover;
     width: 100%;
   }
 
   .hero-logo {
-    max-width: 100px; 
+    max-width: 100px;
   }
 
   .hero h1 {
@@ -1499,9 +1692,11 @@ details:not([open]) .answer {
     font-size: 1.3rem;
     letter-spacing: 0px
   }
+
   .header-section {
     margin: 50px 0;
   }
+
   .key-statistics table {
     display: block;
     overflow-x: scroll;
@@ -1510,20 +1705,26 @@ details:not([open]) .answer {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  .countdown-container {
+    max-width: 400px;
+  }
+
   .calendar-and-legend {
     display: flex;
     flex-wrap: wrap;
   }
+
   .calendar-legend {
     text-align: center;
     width: 100%;
   }
-  
+
   .highlight-cards {
     flex-direction: column;
     gap: 18px;
   }
-  
+
   .goals-list {
     grid-template-columns: 1fr;
     /* Cambia a una sola columna */
@@ -1544,10 +1745,11 @@ details:not([open]) .answer {
     box-shadow: none;
     border-radius: 0;
   }
+
   .container-sidebar {
     width: 90%;
   }
-  
+
   .navbar ul {
     justify-content: right;
     padding-right: 15px;
@@ -1557,6 +1759,7 @@ details:not([open]) .answer {
   .highlight-card img {
     max-height: 90px;
   }
+
   .footer-sections {
     flex-flow: column;
   }
@@ -1565,29 +1768,35 @@ details:not([open]) .answer {
     margin-top: 20px;
     width: 100%;
   }
+
   .faq-group {
     margin: 50px 0;
     padding: 15px;
   }
-  .form-container{
+
+  .form-container {
     padding: 15px;
   }
+
   fieldset {
     padding: 0 15px;
     margin: 15px 0;
   }
+
   .form-group {
     margin: 0;
   }
-  .form-group-terms{
+
+  .form-group-terms {
     margin: 15px 0;
   }
-  
-  .key-statistics tfoot tr td, .key-statistics .table-header {
+
+  .key-statistics tfoot tr td,
+  .key-statistics .table-header {
     text-align: left;
     padding-left: 16px;
   }
-  
+
 }
 
 
@@ -1610,6 +1819,8 @@ details:not([open]) .answer {
   left: 50%;
   margin-left: -1px;
 }
+
+
 
 .container {
   padding: 15px 30px;
@@ -1711,13 +1922,16 @@ details:not([open]) .answer {
 }
 
 .container .content .info {
-  font-size: 0.7rem;  /* Més petit */
-  color: #fff;        /* Text en blanc */
+  font-size: 0.7rem;
+  /* Més petit */
+  color: #fff;
+  /* Text en blanc */
   margin-top: 5px;
 }
 
 .container .content .info i {
-  color: #fff;        /* Icones en blanc */
+  color: #fff;
+  /* Icones en blanc */
   margin-right: 5px;
 }
 
@@ -1728,7 +1942,7 @@ details:not([open]) .answer {
 
 .container .content h2 {
   margin: 0 0 10px 0;
-  font-size: 18px;
+  font-size: 1.6rem;
   font-weight: normal;
   color: black;
 }
