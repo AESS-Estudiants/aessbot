@@ -259,10 +259,6 @@ sup {
   transform: translateY(-50%) scale(1.1);
 }
 
-
-
-
-
 .hero {
   position: relative;
   margin: 0 auto;
@@ -278,7 +274,7 @@ sup {
     url(../images/robot_right.svg),
     repeating-conic-gradient(from 0deg at center, var(--beige-cartell) 0deg 10deg, var(--red-cartell) 10deg 20deg);
   /* Define el tamaño de cada capa: las imágenes se muestran al 30% y el sunburst cubre toda la sección */
-  background-size: 30%, 30%, cover;
+  background-size: 25%, 25%, cover;
   /* Evita repeticiones en las dos primeras capas, y tampoco en el sunburst */
   background-repeat: no-repeat, no-repeat, no-repeat;
   /* Posición de las imágenes y del sunburst:
@@ -525,9 +521,9 @@ sup {
 }
 
 .countdown-container .download-button button:active {
-  background-color: var(--blue-button-active);
+  background-color: var(--darker-blue);
   color: var(--white);
-  border: 2px solid var(--blue-button);
+  border: 2px solid var(--darker-blue);
 }
 
 /* Contenidor del calendari */
@@ -1688,6 +1684,11 @@ details:not([open]) .answer {
     letter-spacing: 0px;
   }
 
+  .hero-content .frame {
+
+
+  }
+
   .hero p {
     font-size: 1.3rem;
     letter-spacing: 0px
@@ -1955,46 +1956,172 @@ details:not([open]) .answer {
 }
 
 @media (max-width: 767.98px) {
-  .timeline::after {
-    left: 90px;
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 15px 0;
   }
 
+  .timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: black;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+    z-index: -1;
+  }
+
+
   .container {
-    width: 100%;
-    padding-left: 120px;
-    padding-right: 30px;
+    padding: 15px 30px;
+    position: relative;
+    background: inherit;
+  }
+
+  .container.left {
+    left: 0;
+    width: 90%;
   }
 
   .container.right {
-    left: 0%;
+    left: 10%;
+    width: 90%;
   }
 
-  .container.left::after,
+  /* Bolita blanca */
+  .container::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: calc(50% - 8px);
+    right: -8px;
+    background: #ffffff;
+    border: 2px solid black;
+    border-radius: 16px;
+    z-index: 1;
+    display: none;
+  }
+
   .container.right::after {
-    left: 82px;
+    left: -8px;
   }
 
-  .container.left::before,
+  .container::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 2px;
+    top: calc(50% - 1px);
+    right: 8px;
+    background: black;
+    z-index: 1;
+    display: none;
+  }
+
   .container.right::before {
-    left: 100px;
-    border-color: transparent black transparent transparent;
+    left: 8px;
+    display: none;
   }
 
-  .container.left .date,
+  .container .date {
+    position: absolute;
+    display: inline-block;
+    top: calc(50% - 8px);
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    z-index: 1;
+  }
+
+  .container.left .date {
+    right: -40px;
+  }
+
   .container.right .date {
-    right: auto;
-    left: 15px;
+    left: -40px;
   }
 
-  .container.left .icon,
+  /* icon */
+  .container .icon {
+    position: absolute;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    padding: 4px 0;
+    top: calc(50% - 20px);
+    background: #F6D155;
+    border: 2px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    z-index: 1;
+  }
+
+  .container.left .icon {
+    right: -15px;
+    display: none;
+  }
+
   .container.right .icon {
-    right: auto;
-    left: 146px;
+    left: -15px;
+    display: none;
   }
 
-  .container.left .content,
+  .container .content {
+    padding: 5px 5px 0px 0px;
+    background: var(--blue-cartell);
+    position: relative;
+    border-radius: 0 200px 200px 0;
+    height: 150px;
+  }
+
+  .container .content .info {
+    font-size: 0.6rem;
+    /* Més petit */
+    color: #fff;
+    /* Text en blanc */
+    margin-top: 0px;
+    margin: 0 0 80px 0 ;
+  }
+
+  .container .content .info i {
+    color: #fff;
+    /* Icones en blanc */
+    margin-right: 5px;
+  }
+
   .container.right .content {
-    padding: 30px 30px 30px 90px;
-    border-radius: 500px 0 0 500px;
+    padding: 0px 0px 0px 20px;
+    border-radius: 200px 0 0 200px;
+  }
+
+  .container .content h2 {
+    margin: 0 0 0px 0;
+    font-size: 1rem;
+    font-weight: normal;
+    color: black;
+    line-height: 1.3rem;
+    padding-bottom: 6px;
+    padding-top: 10px;
+  }
+
+  .container .content p {
+    margin: 0;
+    font-size: 12px;
+    line-height: 22px;
+    color: #000000;
+    margin-bottom: 5px;
   }
 }
