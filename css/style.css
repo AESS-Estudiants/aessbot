@@ -263,7 +263,6 @@ sup {
   position: relative;
   margin: 0 auto;
   height: 500px;
-  background-color: #000;
   /* Las capas se especifican separadas por comas:
      - La primera capa: imagen izquierda.
      - La segunda capa: imagen derecha.
@@ -298,14 +297,15 @@ sup {
 
 .hero-content .frame {
   background-color: black;
-  padding: 10px;
+  padding: 10px 25px;
   border-radius: 10px;
 }
 
 .hero-content h1 {
   font-family: "Franklin";
-  color: black;
   font-size: 6rem;
+  color: var(--blue-cartell);
+    text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
   /* Cambia este valor según lo que necesites */
 }
 
@@ -318,15 +318,16 @@ sup {
 
 .hero-content h3 {
   font-family: "Franklin";
-  color: var(--blue-cartell);
-  font-size: 1.2rem;
+  color: white;
+  font-size: 1rem;
+  font-style: oblique;
   /* Cambia este valor según lo que necesites */
 }
 
 
 .hero-section {
+  background-image: repeating-conic-gradient(from 0deg at center, var(--beige-cartell) 0deg 10deg, var(--red-cartell) 10deg 20deg);
   text-align: center;
-  background-color: black;
 }
 
 .hero-logo {
@@ -1029,6 +1030,9 @@ figcaption {
 .header-section {
   margin: 50px 0;
 }
+.header-section ul li {
+  text-align: left;
+}
 
 .header-section h2 {
   margin-bottom: 18px;
@@ -1046,11 +1050,6 @@ figcaption {
 .header-section ul {
   text-align: justify;
 }
-
-.header-section ul li {
-  text-align: justify;
-}
-
 
 
 table {
@@ -1956,14 +1955,11 @@ details:not([open]) .answer {
 }
 
 @media (max-width: 767.98px) {
-
-  /* Timeline */
-  .timeline {
-    position: relative;
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 15px 0;
+  .hero {
+    background-image: none ;
+  }
+  .timeline::after {
+    left: 90px;
   }
 
   .timeline::after {
@@ -2123,5 +2119,17 @@ details:not([open]) .answer {
     line-height: 22px;
     color: #000000;
     margin-bottom: 5px;
+  }
+
+  .hero-content .frame {
+    background-color: black;
+    padding: 10px 25px;
+    border-radius: 10px;
+  }
+  .frame h2 {
+    font-size: 1.5rem;
+  }
+  .frame h3 {
+    font-size: 1rem;
   }
 }
