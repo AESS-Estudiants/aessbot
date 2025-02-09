@@ -259,10 +259,6 @@ sup {
   transform: translateY(-50%) scale(1.1);
 }
 
-
-
-
-
 .hero {
   position: relative;
   margin: 0 auto;
@@ -278,7 +274,7 @@ sup {
     url(../images/robot_right.svg),
     repeating-conic-gradient(from 0deg at center, var(--beige-cartell) 0deg 10deg, var(--red-cartell) 10deg 20deg);
   /* Define el tamaño de cada capa: las imágenes se muestran al 30% y el sunburst cubre toda la sección */
-  background-size: 30%, 30%, cover;
+  background-size: 25%, 25%, cover;
   /* Evita repeticiones en las dos primeras capas, y tampoco en el sunburst */
   background-repeat: no-repeat, no-repeat, no-repeat;
   /* Posición de las imágenes y del sunburst:
@@ -525,9 +521,9 @@ sup {
 }
 
 .countdown-container .download-button button:active {
-  background-color: var(--blue-button-active);
+  background-color: var(--darker-blue);
   color: var(--white);
-  border: 2px solid var(--blue-button);
+  border: 2px solid var(--darker-blue);
 }
 
 /* Contenidor del calendari */
