@@ -422,7 +422,8 @@ sup {
 .countdown-container {
   font-family: 'Arial', sans-serif;
   /* background: linear-gradient(135deg, #6366f1, #8b5cf6); */
-  background: var(--blue-cartell);
+  /*background: var(--blue-cartell);*/
+  background: rgb(255, 162, 1);
   padding: 1rem;
   border-radius: 1rem;
   color: white;
