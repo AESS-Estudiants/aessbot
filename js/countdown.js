@@ -1,5 +1,5 @@
 // Configurar la fecha límite - por ejemplo, 7 días desde ahora
-const targetDate = new Date(2025, 1, 26);
+const targetDate = new Date(2025, 5, 7, 11, 0);
 
 function updateCountdown() {
   const currentDate = new Date();
